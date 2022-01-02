@@ -38,6 +38,13 @@ Page({
           data: {
             userInfo: res.userInfo
           },
+
+    goToindex: function () {
+      wx.navigateTo({
+        url: '/pages/index.index',
+      })
+    },
+
           success: (res) => {
             page.setData({
               user: res.data.currentUser,

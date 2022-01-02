@@ -23,7 +23,7 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 
-  <button bindtap="getUserProfile">Login</button>
+  <button bindtap="goToIndex">Login</button>
 
 </view>
 

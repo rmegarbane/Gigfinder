@@ -9,6 +9,35 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
   },
+
+    "tabBar": {
+        "backgroundColor": "#CCD1E4",
+        "borderStyle": "black",
+        "selectedColor": "#D03232",
+        "color": "#131313",  
+        "list": [{
+          "pagePath": "pages/index/index",
+          "iconPath": "pages/images/home.png",
+          "selectedIconPath": "pages/images/home.png",
+          "text": "Home"
+         }, {
+          "pagePath": "pages/index/index",
+          "iconPath": "pages/images/heart.png",
+          "selectedIconPath": "pages/images/heart.png",
+          "text": "Liked"
+        }, {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/add.png",
+        "selectedIconPath": "pages/images/add.png",
+        "text": "Add"
+        }, {
+          "pagePath": "pages/index/index",
+          "iconPath": "pages/images/profile.png",
+          "selectedIconPath": "pages/images/profile.png",
+          "text": "Profile"
+          }]
+      },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -33,7 +33,7 @@
           <view>{{item.name}}</view>
         </view>
       </view>
-    </scroll-view>
+  </scroll-view>
   
 
 </view>

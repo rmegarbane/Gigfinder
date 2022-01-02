@@ -25,6 +25,7 @@ App({
 
   globalData: {
     userInfo: null,
-    url: "http://localhost:3000/api/v1"
+    url: "http://localhost:3000/api/v1",
+    // url: "http://gig-finder-api.wogengapp.cn/api/v1"
   }
 })
