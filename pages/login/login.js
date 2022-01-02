@@ -15,12 +15,21 @@ Page({
       url: '../logs/logs'
     })
   },
+  
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
+  },
+
+
+  goToIndex: function (e) {
+    console.log("clicked")
+    wx.switchTab({ 
+     url: '/pages/index/index',
+    })
   },
 
   getUserProfile(e) {
@@ -39,12 +48,6 @@ Page({
             userInfo: res.userInfo
           },
 
-    goToindex: function () {
-      wx.navigateTo({
-        url: '/pages/index.index',
-      })
-    },
-
           success: (res) => {
             page.setData({
               user: res.data.currentUser,
@@ -57,9 +60,6 @@ Page({
         //   hasUserInfo: true
         // })
       }
-    })
-    wx.navigateTo({
-      url: 'pages/index/index',
     })
   },
 

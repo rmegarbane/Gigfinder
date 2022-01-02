@@ -26,14 +26,14 @@
   </view>
   <!--Catergory scroll through -->
 
-  <scroll-view scroll-x="{{true}}">
-      <view class="category-box">
-        <view bindtap="navigateToItemShow" wx:for="{{items}}" mark:id="{{item.id}}" wx:key = "unique" class="category-card" >
-          <image src="/pages/index/photos/handshake-icon.png" class="category-photo"></image>
-          <view>{{item.name}}</view>
-        </view>
-      </view>
-  </scroll-view>
+  <view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+        </scroll-view>
+    </view>
+
   
 
 </view>
