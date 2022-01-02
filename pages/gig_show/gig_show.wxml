@@ -1,0 +1,4 @@
+<!--pages/gig_show/gig_show.wxml-->
+<text>pages/gig_show/gig_show.wxml</text>
+
+<view class="h1">Gigs</view>

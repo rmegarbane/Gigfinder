@@ -23,6 +23,18 @@
           "pathName": "pages/login/login",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/post_gig/post_gig",
+          "pathName": "pages/post_gig/post_gig",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/gig_show/gig_show",
+          "pathName": "pages/gig_show/gig_show",
+          "query": "",
+          "scene": null
         }
       ]
     }

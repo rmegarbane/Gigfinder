@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/post_gig/post_gig",
+    "pages/gig_show/gig_show"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -26,7 +28,7 @@
           "selectedIconPath": "pages/images/heart.png",
           "text": "Liked"
         }, {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/post_gig/post_gig",
         "iconPath": "pages/images/add.png",
         "selectedIconPath": "pages/images/add.png",
         "text": "Add"
