@@ -1,8 +1,4 @@
-// pages/gig_show/gig_show.js
-
-let app = getApp()
-
-
+// pages/gig_list/gig_list.js
 Page({
 
   /**

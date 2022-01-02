@@ -13,7 +13,21 @@ Page({
    */
   onLoad: function (options) {
 
+  //   const app = getApp()
+
+  //   Page({
+  //     data: { gigs: app.globalData.gigs }
+  //   })
+
+  // },
+
+  // goToShow: function(e) {
+  //   const gigIndex = e.target.dataset.index
+  //   wx.navigateTo({
+  //     url: `/pages/gig_show/gig_show?index=${gigIndex}`
+  //   })
   },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered

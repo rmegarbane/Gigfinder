@@ -3,7 +3,8 @@
     "pages/login/login",
     "pages/index/index",
     "pages/post_gig/post_gig",
-    "pages/gig_show/gig_show"
+    "pages/gig_show/gig_show",
+    "pages/gig_list/gig_list"
   ],
   "window":{
     "backgroundTextStyle":"light",

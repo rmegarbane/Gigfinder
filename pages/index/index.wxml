@@ -33,6 +33,17 @@
           <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
         </scroll-view>
     </view>
+<!-- Need to match backend userID -->
+    <view class="h3">Recently posted</view>
+  <view class="container">
+    <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="onClick" data-id="{{gig.id}}">
+   
+    <view class="card-info">
+      <h2>{{product.name}}: </h2>
+        <text>${{product.price}}</text> 
+     </view>
+  </view>
+</view>
 
   
 

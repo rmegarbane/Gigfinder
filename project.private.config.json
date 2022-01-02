@@ -35,6 +35,18 @@
           "pathName": "pages/gig_show/gig_show",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/gig_show/gig_show",
+          "pathName": "pages/gig_show/gig_show",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/gig_list/gig_list",
+          "pathName": "pages/gig_list/gig_list",
+          "query": "",
+          "scene": null
         }
       ]
     }
