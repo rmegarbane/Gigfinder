@@ -8,10 +8,22 @@ Page({
 
   },
 
+  goToShowGig: function (e) {
+    console.log(e.currentTarget.dataset)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/gig_show/gig_show?id=${id}`,
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+
+    const app = getApp()
+    const globalData = app.globalData
+    this.setData(globalData)
 
   //   const app = getApp()
 
