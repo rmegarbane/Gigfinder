@@ -1,1 +1,40 @@
 /* pages/gig_show/gig_show.wxss */
+
+
+.card-product {
+  background: #F5EEDC;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 5rpx;
+  height: 100vh;
+}
+
+.card-image {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.card-info {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+} 
+
+.h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}

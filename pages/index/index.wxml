@@ -40,12 +40,16 @@
           <image class="card-image" src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80"/>
 
       <view class="card-info">
-        <h2>{{gig.name}}: </h2>
-          <text>{{gig.price}}</text> 
+      <text>{{gig.id}}</text>
+        <text>{{gig.title}}: </text>
+          <text>{{gig.rate}}</text> 
           <text>{{gig.description}}</text>
+          <text>Date posted{{gig.date_posted}} term: {{gig.term}}</text>
+          <text>expiration{{01/26/2022}}</text>
       </view>
     </view>
   </view>
+
 
   
 
