@@ -24,7 +24,12 @@ App({
   },
 
   globalData: {
+    gigs: [
+      {title: "Juggler", description: "Performer with the ability to juggle", location: "Shanghai", rate: "$300", date_posted: "01/03/2022", term: "1 day", expiration: "01/26/2022" }
+    ],
+
     userInfo: null,
-    url: "http://localhost:3000/api/v1"
+    // url: "http://localhost:3000/api/v1",
+    url: "http://gig-finder-api.wogengapp.cn/api/v1"
   }
 })

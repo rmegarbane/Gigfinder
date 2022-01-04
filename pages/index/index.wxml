@@ -1,27 +1,50 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<!--pages/index/index.wxml-->
+  <text>pages/index/index.wxml</text>
+<view class="full-margin">
+  <!-- Change the page depending on what want -->
+  <view class="button-category-spacing">
+    <view class = "button-category" bindtap=""><h2>Gigs</h2></view> <view class = "button-category" bindtap=""><h2>Talents</h2></view>
   </view>
 
-  <button bindtap="getUserProfile">Login</button>
+  <!-- <view class="search-form-control form-group">
+    <form action="form-control string required"></form> -->
+
+    <text>space to search location</text>
+
+  <view class="search-container">
+
+    <form bindsubmit="formSubmit">
+          <view class="search">
+            <input class="h4" type="text" name="query" placeholder="Search" />
+            <button form-type="submit"></button>
+          </view>
+    </form>
+  </view>  
+
+  <view class="title-container">
+    <h2>Categories</h2>
+  </view>
+  <!--Catergory scroll through -->
+
+  <view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+        </scroll-view>
+    </view>
+<!-- Need to match backend userID -->
+    <view class="h3">Recently posted</view>
+  <view class="container">
+    <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="onClick" data-id="{{gig.id}}">
+   
+    <view class="card-info">
+      <h2>{{product.name}}: </h2>
+        <text>${{product.price}}</text> 
+     </view>
+  </view>
+</view>
+
+  
 
 </view>

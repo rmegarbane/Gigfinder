@@ -1,19 +1,149 @@
-/**index.wxss**/
-.userinfo {
+/* pages/index/index.wxss */
+
+.full-margin {
+  margin: 2px;
+}
+
+.button-category {
+  background-color: #CCD1E4;
+  width: 600rpx;
+  height: 100rpx;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  color: #aaa;
+  justify-content: center;
+  margin: 16rpx;
+  border-radius: 8rpx;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.button-category h2 {
+  font-size: 36rpx;
+  font-weight: bold;
 }
 
-.usermotto {
-  margin-top: 200px;
+.button-category-spacing {
+ align-items: center;
+ display: flex;
+ } 
+
+.title-container {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
+.title-container h2{
+  font-size: 48rpx;
+  padding-left: 24rpx;
+}
+
+
+.page-section-spacing{
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+
+.category-box {
+  display: flex;
+  margin-top: 30rpx;
+  text-align: center;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 300rpx;
+  white-space: nowrap;  
+}
+
+.category-card {
+  display: inline-block;
+  padding: 10rpx;
+  margin-right: 10rpx;
+}
+
+.category-photo {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 15rpx;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+}
+.search {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-items: flex-start;
+  padding: 12.5rpx 12.5rpx 12.5rpx 5rpx;
+  
+}
+
+.search button {
+  background-color: green;
+  margin: 0!important;
+  padding: 0!important;
+  width: 188rpx!important;
+  height: 65rpx!important;
+  display: inline-block;
+}
+
+.page-section-spacing{
+  margin-top: 60rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+
+.h3 {
+  font-size: 18px;
+}
+
+.card-info {
+  padding: 12rpx;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: flex-end;
+} 
+.card-info h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.card-info text {
+  font-size: 32rpx;
+}
+
+#demo1 {
+  background-color: green;
+}
+
+#demo2 {
+  background-color: gray;
+}
+
+#demo3 {
+  background-color: yellow;
+}
+
