@@ -133,6 +133,7 @@
 }
 .card-info text {
   font-size: 32rpx;
+  display: block;
 }
 
 
@@ -149,7 +150,7 @@
 
 .recently-posted-card {
   /* overflow: hidden; */
-  height: 350rpx;
+  /* height: 350rpx; */
   width: 300rpx;
   background-color: #97BFB4;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);

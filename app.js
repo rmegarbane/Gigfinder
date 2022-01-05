@@ -36,7 +36,7 @@ App({
     globalData: {
     gigs: [
       {
-      "gig_id": 1,
+      "id": 1,
       "title": "Juggler",
       "description": "Performer with the ability to juggle",
       "location": "Shanghai",
@@ -47,7 +47,7 @@ App({
 
       },
       {
-        "gig_id": 2,
+        "id": 2,
         "name": "Mountain Bike",
         "price": "17",
         "description": "Full suspension"

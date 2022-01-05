@@ -10,6 +10,7 @@ Page({
 
   goToShowGig: function (e) {
     console.log(e.currentTarget.dataset)
+    console.log("Here", e)
     const id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: `/pages/gig_show/gig_show?id=${id}`,

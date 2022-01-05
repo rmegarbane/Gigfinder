@@ -17,21 +17,26 @@ Page({
    */
   onLoad: function (options) {
 
-    // const page = this
-    // const gig_id = options.id
-    // const auth = wx.getStorageSync('auth')
-    // const header = {
-    //   'X-User-Email': auth.email,
-    //   'X-User-Token': auth.token
-    // }
-    // console.log("This is the header", header)
-    // wx.request({
-    //   url: `${getApp().globalData.baseUrl}/gigs/${gig_id}`,
-    //   header, 
-    //   success(res) {
-    //     page.setData({ gig: res.data.product })
-    //   }
-    // })
+    const app = getApp()
+    const globalData = app.globalData
+    this.setData(globalData)
+
+
+    const page = this
+    const gig_id = options.id
+    const auth = wx.getStorageSync('auth')
+    const header = {
+      'X-User-Email': auth.email,
+      'X-User-Token': auth.token
+    }
+    console.log("This is the header", header)
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/gigs/${gig_id}`,
+      header, 
+      success(res) {
+        page.setData({ gig: res.data.gig })
+      }
+    })
   },
 
   /**
