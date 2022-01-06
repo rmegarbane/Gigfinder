@@ -4,8 +4,10 @@
     "pages/index/index",
     "pages/post_gig/post_gig",
     "pages/gig_show/gig_show",
-    "pages/gig_list/gig_list"
+    "pages/gig_list/gig_list",
+    "pages/setup_profile/setup_profile"
   ],
+  
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
