@@ -1,4 +1,5 @@
-/**app.wxss**/
+/* Need to use view class with these elements. For example, instead of <h1>Header</h1> use <view class="h1">Header</view>  */
+
 .container {
   height: 100%;
   display: flex;
@@ -9,7 +10,42 @@
   box-sizing: border-box;
 } 
 
-.h1 {
+h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 50rpx;
 }
+ 
+h2 {
+  font-size: 40rpx;
+}
+
+textarea {
+  padding: 12rpx;
+  margin-top: 8rpx;
+  margin-bottom: 8rpx;
+  height: 128rpx;
+}
+
+.page-section {
+  display: flex;
+  align-items: left;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 12rpx;
+}
+
+.text-area-wrap {
+  background-color: #F1E9E5;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  opacity: 0.8;
+}
+
+/* wx element */
+button {
+  width: 50%;
+  background-color: #97BFB4;
+}
+
+
+
+

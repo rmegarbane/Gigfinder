@@ -47,6 +47,12 @@
           "pathName": "pages/gig_list/gig_list",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/setup_profile/setup_profile",
+          "pathName": "pages/setup_profile/setup_profile",
+          "query": "",
+          "scene": null
         }
       ]
     }
