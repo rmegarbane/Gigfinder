@@ -17,6 +17,15 @@ Page({
     })
   },
 
+  goToGigList: function (e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/gig_list/gig_list?id=${id}`,
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
