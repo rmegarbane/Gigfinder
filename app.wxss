@@ -1,4 +1,8 @@
-/* Need to use view class with these elements. For example, instead of <h1>Header</h1> use <view class="h1">Header</view>  */
+/**app.wxss**/
+
+@import 'stylesheets/index.wxss';
+
+//* Need to use view class with these elements. For example, instead of <h1>Header</h1> use <view class="h1">Header</view>  */
 
 .container {
   height: 100%;
@@ -45,7 +49,5 @@ button {
   width: 50%;
   background-color: #97BFB4;
 }
-
-
 
 

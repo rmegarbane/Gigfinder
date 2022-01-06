@@ -86,6 +86,7 @@
 }
 .search {
   display: flex;
+  width: 500;
   background-color: white;
   align-items: center;
   justify-items: flex-start;
@@ -97,9 +98,17 @@
   background-color: green;
   margin: 0!important;
   padding: 0!important;
-  width: 188rpx!important;
-  height: 65rpx!important;
+  width: 90rpx!important;
+  height: 90rpx!important;
   display: inline-block;
+  border-radius: 50%;
+}
+
+.search-icon {
+  width: 80rpx;
+  height: 80rpx;
+  display: inline-block;
+
 }
 
 .page-section-spacing{
@@ -133,10 +142,52 @@
 }
 .card-info text {
   font-size: 32rpx;
+  display: block;
 }
 
+
+.recently-posted-container {
+  /* height: 150px; */
+  /* width: 100%; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+
+.recently-posted-card {
+  /* overflow: hidden; */
+  /* height: 350rpx; */
+  width: 300rpx;
+  background-color: #97BFB4;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  /* display: flex;
+  align-items: center;  */
+  margin: 16rpx;
+  border-radius: 18rpx;
+  border: black;
+  border-width: 24rpx;
+  border: 6px solid lightgray;
+}
+
+
+.card-image {
+  object-fit: cover;
+  height: 200rpx;
+  width: 100%;
+  /* border-radius: 24rpx; */
+  border-top
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+  
+}
+
+
 #demo1 {
-  background-color: green;
+  
 }
 
 #demo2 {

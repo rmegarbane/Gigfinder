@@ -8,10 +8,32 @@ Page({
 
   },
 
+  goToShowGig: function (e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/gig_show/gig_show?id=${id}`,
+    })
+  },
+
+  goToGigList: function (e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/gig_list/gig_list?id=${id}`,
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+
+    const app = getApp()
+    const globalData = app.globalData
+    this.setData(globalData)
 
   //   const app = getApp()
 

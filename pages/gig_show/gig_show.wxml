@@ -2,3 +2,22 @@
 <text>pages/gig_show/gig_show.wxml</text>
 
 <view class="h1">Gig Details</view>
+
+<!-- <view wx:for="{{products}}" wx:for-item="product" bindtap="onClick" data-id="{{gig.id}}"> -->
+  <image class="card-image" src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80"/>
+  
+  <!-- <view class="card-product"> -->
+    <!-- <view class="card-info"> -->
+        <view  class="h2">Title:{{gig.title}} </view>
+          <view class="p">Rate:{{gig.rate}}</view> 
+          <view class="p">Description:{{gig.description}}</view>
+          <view class="p">Date posted:{{gig.date_posted}} term: {{gig.term}}</view>
+          <view class="p">expiration:"{{01/26/2022}}</view>
+      <!-- </view> -->
+ <!-- </view>  -->
+
+
+    <!-- <button bindtap="goToEditPage">{{text}}Edit</button>
+    <button bindtap="goToEditPage">{{text}}Delete (edit)</button> --> 
+
+<!-- </view> -->
