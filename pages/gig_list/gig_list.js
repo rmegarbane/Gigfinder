@@ -13,6 +13,11 @@ Page({
    */
   onLoad: function (options) {
 
+  
+    const app = getApp()
+    const globalData = app.globalData
+    this.setData(globalData)
+
   },
 
   /**
