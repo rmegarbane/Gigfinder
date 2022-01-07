@@ -1,66 +1,71 @@
 // pages/setup_profile/setup_profile.js
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
+
+  // Documentation for image upload function: https://developers.weixin.qq.com/miniprogram/en/dev/api/media/image/wx.getImageInfo.html
+
+  uploadImageButton: function (e) {
+    const that = this
+    console.log(e.currentTarget.dataset)
+    const id = e.currentTarget.dataset.id
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success (res) {
+        console.log('success!')
+        // tempFilePath can be used as the src attribute of the img tag to display pictures
+        that.setData({
+          src: res.tempFilePaths
+        })
+        console.log(res.tempFilePaths)
+        // const tempFilePaths = res.tempFilePaths
+      }
+    })
+
+    // Get image info
+    wx.getImageInfo({
+      src: res.tempFilePaths[0],
+      success: function (res) {
+        console.log(res.width)
+        console.log(res.height)
+        console.log(res.path)
+      }
+    }) 
+  },
+
+
   onLoad: function (options) {
-
+    // show existing user data
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+
   onReady: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
+
   onShow: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
+
   onHide: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page unload
-   */
   onUnload: function () {
-
   },
 
-  /**
-   * Page event handler function--Called when user drop down
-   */
+
   onPullDownRefresh: function () {
-
   },
 
-  /**
-   * Called when page reach bottom
-   */
+
   onReachBottom: function () {
-
   },
 
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
 
+  onShareAppMessage: function () {
   }
 })

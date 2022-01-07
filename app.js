@@ -43,18 +43,30 @@ App({
       "description": "Performer with the ability to juggle",
       "location": "Shanghai",
       "rate": "$300",
-      "date_posted": "01/03/2022", "term": "1 day",
+      "date_posted": "01/03/2022", 
+      "term": "1 day",
       "expiration": "01/26/2022"
-
-
       },
       {
         "id": 2,
-        "name": "Mountain Bike",
-        "price": "17",
-        "description": "Full suspension"
-        }
+        "title": "Dancer",
+        "description": "B-boy style. Must have several years' experience in boy band and be young and handsome. Some domestic and international travel may be necessary.",
+        "location": "Guangzhou",
+        "rate": "$20",
+        "date_posted": "01/04/2022", 
+        "term": "2 months",
+        "expiration": "01/23/2022"
+        },
+        {
+          "id": 3,
+          "title": "Voice actress",
+          "description": "Needs British accent, female preferred",
+          "location": "Beijing",
+          "rate": "$50",
+          "date_posted": "01/07/2022", 
+          "term": "4 weeks",
+          "expiration": "02/01/2022"
+          }
     ]
   }
-
 })
