@@ -3,26 +3,41 @@
   <form bindsubmit="bindSubmit">
     <view class="page-section">
     <h1>Set up user profile</h1>
+
       <h2>Name</h2>
         <view class="text-area-wrap">
           <textarea name="name" value="{{name}}" placeholder="Choose a username"/>
-        </view>
-        <h2>Gender</h2>
-        <view class="text-area-wrap">
-          <textarea name="gender" value="{{gender}}" placeholder="Display/select gender"/>
         </view>   
-      <h2>Age</h2>
-      <h2>Languages</h2>
+
+      <h2>Pictures</h2>
+      <text>Add a picture</text>
+      <view class="image-holder">
+        <image src="{{res.tempFilePaths}}" mode="aspecFill"  bindlongtap="imgLongTap"/>
+        <image src="/pages/images/blank-avatar.png"/>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" bindtap="uploadImageButton">Upload Image</button>
+      </view>
+
+      <h2>Talent</h2>
         <view class="text-area-wrap">
-          <textarea name="languages" value="{{languages}}" placeholder="Which languages can you speak?"/>
+          <textarea name="talent" value="{{talent}}" placeholder="What service are you offering?"/>
+        </view>   
+
+      <h2>Rate</h2>
+        <view class="text-area-wrap">
+          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge?"/>
         </view>
-        <h2>Self-introduction</h2>
+
+      <h2>Self-introduction</h2>
         <view class="text-area-wrap">
-          <textarea name="languages" value="{{languages}}" placeholder="Say something about yourself!"/>
+          <textarea name="description" value="{{description}}" placeholder="Say something about yourself!"/>
         </view>        
+
       <view class="btn-area">
           <button style="margin: 30rpx 0" formType="submit">Submit</button>
-          <button style="margin: 30rpx 0" formType="reset">Reset</button>
+          <button style="margin: 30rpx 0" formType="reset">Reset form</button>
       </view>
     </view>
   </form>

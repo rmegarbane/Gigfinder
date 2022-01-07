@@ -37,12 +37,6 @@
           "scene": null
         },
         {
-          "name": "pages/gig_show/gig_show",
-          "pathName": "pages/gig_show/gig_show",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/gig_list/gig_list",
           "pathName": "pages/gig_list/gig_list",
           "query": "",
@@ -51,6 +45,12 @@
         {
           "name": "pages/setup_profile/setup_profile",
           "pathName": "pages/setup_profile/setup_profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_gigs/my_gigs",
+          "pathName": "pages/my_gigs/my_gigs",
           "query": "",
           "scene": null
         }
