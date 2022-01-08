@@ -1,2 +1,15 @@
-<!--pages/my_profile/my_profile.wxml-->
-<text>pages/my_profile/my_profile.wxml</text>
+<view class="container">
+  <h1>Dashboard</h1>
+  <view class="btn-area">
+    <button style="margin: 30rpx 0" bindtap="viewProfile">View profile</button>
+  </view>
+  <view class="btn-area">
+    <button style="margin: 30rpx 0" bindtap="updateProfile">Update profile</button>
+  </view>
+  <view class="btn-area">
+    <button style="margin: 30rpx 0" bindtap="addGig">Add a gig</button>
+  </view>
+  <view class="btn-area">
+    <button style="margin: 30rpx 0" bindtap="viewAllGigs">View all gigs</button>
+  </view>
+</view>

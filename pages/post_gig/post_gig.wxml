@@ -27,8 +27,6 @@
           <textarea name="term" value="{{term}}" placeholder="e.g. 250-300/hr"/>
         </view>     
 
-
-
       <view class="btn-area">
           <button style="margin: 30rpx 0" formType="submit">Submit gig</button>
           <button style="margin: 30rpx 0" formType="reset">Reset form</button>

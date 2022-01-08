@@ -30,9 +30,9 @@ App({
  globalData: {
     userInfo: null,
     // LOCAL HOST IS FOR LOCAL RAILS S. NOT PRODUCTION
-    // url: "http://localhost:3000/api/v1",
+  //  url: "http://localhost:3000/api/v1",
     // PRODUCTION API (MAY NOT HAVE ALL THE LATEST CHANGES & UPDATES FROM BACKEND)
-    url: "http://gig-finder-api.wogengapp.cn/api/v1"
+   url: "http://gig-finder-api.wogengapp.cn/api/v1"
   },
 
     globalData: {

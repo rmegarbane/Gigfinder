@@ -53,6 +53,12 @@
           "pathName": "pages/my_gigs/my_gigs",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/my_profile/my_profile",
+          "pathName": "pages/my_profile/my_profile",
+          "query": "",
+          "scene": null
         }
       ]
     }

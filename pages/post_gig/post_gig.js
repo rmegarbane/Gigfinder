@@ -9,14 +9,13 @@ Page({
     const formData = e.detail.value
     console.log("form data", formData)
     const app = getApp()
-    // const product = e.detail.value
     const auth = wx.getStorageSync('auth')
     const header = {
       'X-User-Email': auth.email,
       'X-User-Token': auth.token
     }
     wx.request({
-      url: `${getApp().globalData.baseUrl}/products`,
+      url: `${getApp().globalData.baseUrl}/gigs`,
       header,
       method: "POST",
       data: {
@@ -27,14 +26,10 @@ Page({
         page.setData(res.data)
       }
     })
-    // app.globalData.products.push(product)
     wx.reLaunch({
       url: '/pages/my_gigs/my_gigs',
     })
   },
-
-
-
 
 
   onLoad: function (options) {
