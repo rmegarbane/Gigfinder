@@ -1,12 +1,10 @@
 // pages/my_profile/my_profile.js
 Page({
-
   data: {
   },
 
-
   viewProfile: function(e) {
-    wx.navigateTo({
+    wx.reLaunch({
       // update to user profile as seen by anyone
       url: '/pages/my_profile/my_profile',
     })
@@ -19,9 +17,9 @@ Page({
   },
 
   addGig: function(e) {
-    wx.navigateTo({
+    wx.reLaunch({
       // update to create new gig page
-      url: '/pages/gig_new/gig_new',
+      url: '/pages/post_gig/post_gig',
     })
   },
 
@@ -52,10 +50,8 @@ Page({
   onPullDownRefresh: function () {
   },
 
-
   onReachBottom: function () {
   },
-
 
   onShareAppMessage: function () {
   }
