@@ -13,6 +13,32 @@ Page({
    */
   onLoad: function (options) {
 
+    const id = options.id
+    const app = getApp()
+    const globalData = app.globalData
+    this.setData(globalData)
+    const gigs = globalData.gigs
+
+    let gig = gigs.filter(gig => gig.id == id)
+
+    const page = this
+    page.setData(gig[0])
+
+  },
+
+  bindSubmit: function (e) {
+    const page = this
+    const gig = e.detail.value
+    const app = getApp()
+    const gigs = app.globalData.gigs
+
+    app.globalData.gigs[index] = gig
+    
+    // this line needs to  be uncomented once the information is coming through
+    
+    // wx.reLaunch({
+    //   url: 'pages./index/index',
+    // })
   },
 
   /**

@@ -12,6 +12,8 @@ Page({
 
   },
 
+
+
   editGig: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
@@ -34,7 +36,7 @@ Page({
     this.setData(globalData)
     const gigs = globalData.gigs
 
-    let gig = gigs.filter(gig => gig.id ==id)
+    let gig = gigs.filter(gig => gig.id == id)
 
     const page = this
     page.setData(gig[0])
@@ -55,6 +57,23 @@ Page({
     //     page.setData({ gig: res.data.gig })
     //   }
     // })
+  },
+
+  deleteGig: function (e) {
+    const id = e. currentTarget.dataset.id
+
+    const app = getApp()
+    const globalData = app.globalData
+    const gigs = globalData.gigs
+
+    const index = gigs.findIndex(r => r.id == id )
+
+    app.globalData.gigs.splice(index, 1)
+
+    wx.reLaunch ({
+      url: '/pages/index/index',
+    })
+
   },
 
   /**
