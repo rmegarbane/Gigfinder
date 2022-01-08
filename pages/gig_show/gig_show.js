@@ -12,31 +12,49 @@ Page({
 
   },
 
+  editGig: function (e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/edit_gig/edit_gig?id=${id}`,
+    })
+
+  },
+
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
 
+    const id = options.id
     const app = getApp()
     const globalData = app.globalData
     this.setData(globalData)
+    const gigs = globalData.gigs
 
+    let gig = gigs.filter(gig => gig.id ==id)
 
     const page = this
-    const gig_id = options.id
-    const auth = wx.getStorageSync('auth')
-    const header = {
-      'X-User-Email': auth.email,
-      'X-User-Token': auth.token
-    }
-    console.log("This is the header", header)
-    wx.request({
-      url: `${getApp().globalData.baseUrl}/gigs/${gig_id}`,
-      header, 
-      success(res) {
-        page.setData({ gig: res.data.gig })
-      }
-    })
+    page.setData(gig[0])
+
+
+    // const page = this
+    // const gig_id = options.id
+    // const auth = wx.getStorageSync('auth')
+    // const header = {
+    //   'X-User-Email': auth.email,
+    //   'X-User-Token': auth.token
+    // }
+    // console.log("This is the header", header)
+    // wx.request({
+    //   url: `${getApp().globalData.baseUrl}/gigs/${gig_id}`,
+    //   header, 
+    //   success(res) {
+    //     page.setData({ gig: res.data.gig })
+    //   }
+    // })
   },
 
   /**

@@ -12,9 +12,19 @@
           <view class="p">Rate:{{gig.rate}}</view> 
           <view class="p">Description:{{gig.description}}</view>
           <view class="p">Date posted:{{gig.date_posted}} term: {{gig.term}}</view>
-          <view class="p">expiration:"{{01/26/2022}}</view>
+          <view class="p">expiration:"{{gig.expiration}}</view>
       <!-- </view> -->
  <!-- </view>  -->
+
+      
+
+        <view class="controls">
+          <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
+
+          <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>
+
+        </view>
+
 
 
     <!-- <button bindtap="goToEditPage">{{text}}Edit</button>

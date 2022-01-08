@@ -1,0 +1,49 @@
+<!--pages/edit_gig/edit_gig.wxml-->
+<text>pages/edit_gig/edit_gig.wxml</text>
+
+<form bindsubmit="bindSubmit">
+    <view class="page-section">
+    <h1>Edit your gig</h1>
+
+      <h2>Title</h2>
+        <view class="text-area-wrap">
+          <textarea name="name" value="{{name}}" placeholder="Choose a title"/>
+        </view>   
+
+        <h2>Location</h2>
+        <view class="text-area-wrap">
+          <textarea name="description" value="{{location}}" placeholder="Where is the gig?"/>
+        </view>   
+
+      <h2>Rate</h2>
+        <view class="text-area-wrap">
+          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge?"/>
+        </view>
+
+      <h2>Date posted</h2>
+        <view class="text-area-wrap">
+          <textarea name="description" value="{{date_posted}}" placeholder="Date posted"/>
+        </view>   
+
+      <h2>Term</h2>
+        <view class="text-area-wrap">
+          <textarea name="description" value="{{term}}" placeholder="How long is the gig?"/>
+        </view>   
+
+        
+      <h2>Expiration</h2>
+        <view class="text-area-wrap">
+          <textarea name="description" value="{{expiration}}" placeholder="When is it over?"/>
+        </view>        
+     
+
+
+
+     
+
+      <view class="btn-area">
+          <button style="margin: 20rpx " formType="submit" >Update</button>
+          <button style="margin: 20rpx " formType="reset" >Undo</button>
+      </view>
+    </view>
+  </form>

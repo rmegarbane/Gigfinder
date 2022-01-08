@@ -42,6 +42,7 @@
   border: black;
   border-width: 24rpx;
   border: 6px solid lightgray;
+  color: black;
 }
 
 
