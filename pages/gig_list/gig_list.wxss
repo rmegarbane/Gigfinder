@@ -1,1 +1,57 @@
 /* pages/gig_list/gig_list.wxss */
+
+
+.card-info {
+  padding: 12rpx;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: flex-end;
+} 
+.card-info h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.card-info text {
+  font-size: 32rpx;
+  display: block;
+}
+
+
+.recently-posted-container {
+  /* height: 150px; */
+  /* width: 100%; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+
+.recently-posted-card {
+  /* overflow: hidden; */
+  /* height: 350rpx; */
+  width: 300rpx;
+  background-color: #97BFB4;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  /* display: flex;
+  align-items: center;  */
+  margin: 16rpx;
+  border-radius: 18rpx;
+  border: black;
+  border-width: 24rpx;
+  border: 6px solid lightgray;
+}
+
+
+.card-image {
+  object-fit: cover;
+  height: 200rpx;
+  width: 100%;
+  /* border-radius: 24rpx; */
+  border-top
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+  
+}

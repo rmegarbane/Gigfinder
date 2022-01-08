@@ -5,6 +5,18 @@ Page({
    * Page initial data
    */
   data: {
+  
+
+
+  },
+
+  goToShowGig: function (e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/gig_show/gig_show?id=${id}`,
+    })
 
   },
 
@@ -12,6 +24,11 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+
+  
+    const app = getApp()
+    const globalData = app.globalData
+    this.setData(globalData)
 
   },
 
@@ -54,6 +71,8 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
+
+    
 
   },
 
