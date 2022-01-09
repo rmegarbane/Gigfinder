@@ -31,10 +31,13 @@ Page({
   onLoad: function (options) {
     const page = this
     wx.request({
-      url: `1http://localhost:3000/api/v1/gigs/${options.id}`,
+      url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       success: res => {
         console.log(res)
-        page.setData(res.data)
+        page.setData({gig: res.data})
+        wx.setNavigationBarTitle({
+          title: page.data.gig.title,
+        })
       }
     })
 
