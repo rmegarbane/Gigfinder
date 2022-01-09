@@ -16,7 +16,13 @@
       <!-- </view> -->
  <!-- </view>  -->
 
-      
+      <view class="controls">
+        <view class="save-button">save</view>
+        <view class="contact-button">chat</view>
+        <view class="share-button">share</view>
+
+
+      </view>
 
         <view class="controls">
           <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
