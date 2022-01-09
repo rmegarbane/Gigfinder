@@ -1,5 +1,6 @@
-// pages/setup_profile/setup_profile.js
+// pages/post_talent/post_talent.js
 Page({
+
 
   data: {
   },
@@ -37,9 +38,7 @@ Page({
     }) 
   },
 
-
   onLoad: function (options) {
-    // show existing user data
   },
 
 
@@ -50,20 +49,16 @@ Page({
   onShow: function () {
   },
 
-
   onHide: function () {
   },
 
-  onUnload: function () {
-    wx.getUserInfo({
 
-    })
+  onUnload: function () {
   },
 
 
   onPullDownRefresh: function () {
   },
-
 
   onReachBottom: function () {
   },
