@@ -55,14 +55,14 @@
           "scene": null
         },
         {
-          "name": "pages/edit_/edit_gig",
-          "pathName": "pages/gig_show/gig_show",
+          "name": "pages/edit_gig/edit_gig",
+          "pathName": "pages/edit_gig/edit_gig",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/edit_gig/edit_gig",
-          "pathName": "pages/edit_gig/edit_gig",
+          "name": "pages/my_profile/my_profile",
+          "pathName": "pages/my_profile/my_profile",
           "query": "",
           "scene": null
         }
