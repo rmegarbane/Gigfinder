@@ -3,26 +3,21 @@
   <form bindsubmit="bindSubmit">
     <view class="page-section">
     <h1>Set up user profile</h1>
+
+      <h2>User Avatar</h2>
+      <view class="page-section">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
       <h2>Name</h2>
         <view class="text-area-wrap">
           <textarea name="name" value="{{name}}" placeholder="Choose a username"/>
-        </view>
-        <h2>Gender</h2>
-        <view class="text-area-wrap">
-          <textarea name="gender" value="{{gender}}" placeholder="Display/select gender"/>
         </view>   
-      <h2>Age</h2>
-      <h2>Languages</h2>
-        <view class="text-area-wrap">
-          <textarea name="languages" value="{{languages}}" placeholder="Which languages can you speak?"/>
-        </view>
-        <h2>Self-introduction</h2>
-        <view class="text-area-wrap">
-          <textarea name="languages" value="{{languages}}" placeholder="Say something about yourself!"/>
-        </view>        
+
+
       <view class="btn-area">
           <button style="margin: 30rpx 0" formType="submit">Submit</button>
-          <button style="margin: 30rpx 0" formType="reset">Reset</button>
+          <button style="margin: 30rpx 0" formType="reset">Reset form</button>
       </view>
     </view>
   </form>

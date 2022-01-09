@@ -5,7 +5,13 @@
     "pages/post_gig/post_gig",
     "pages/gig_show/gig_show",
     "pages/gig_list/gig_list",
-    "pages/setup_profile/setup_profile"
+    "pages/setup_profile/setup_profile", 
+    "pages/my_gigs/my_gigs",
+    "pages/my_profile/my_profile",
+    "pages/edit_gig/edit_gig",
+    "pages/post_talent/post_talent", 
+    "pages/talent_list/talent_list",
+    "pages/talent_show/talent_show"
   ],
   
   "window":{

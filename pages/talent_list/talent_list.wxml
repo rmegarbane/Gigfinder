@@ -1,0 +1,13 @@
+<h1>List of Talents</h1>
+
+<view class="page-section">
+      <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowUserTalent" class="recently-posted-card" data-id="{{user.id}}">
+      <image class="card-image" src="{{user.image}}" />
+
+      <view class="card-info">
+        <text>{{user.name}}: </text>
+          <text>{{user.rate}}</text> 
+
+      </view>
+    </view>
+  </view>

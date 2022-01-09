@@ -37,12 +37,6 @@
           "scene": null
         },
         {
-          "name": "pages/gig_show/gig_show",
-          "pathName": "pages/gig_show/gig_show",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/gig_list/gig_list",
           "pathName": "pages/gig_list/gig_list",
           "query": "",
@@ -52,6 +46,42 @@
           "name": "pages/setup_profile/setup_profile",
           "pathName": "pages/setup_profile/setup_profile",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_gigs/my_gigs",
+          "pathName": "pages/my_gigs/my_gigs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/edit_gig/edit_gig",
+          "pathName": "pages/edit_gig/edit_gig",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_profile/my_profile",
+          "pathName": "pages/my_profile/my_profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/post_talent/post_talent",
+          "pathName": "pages/post_talent/post_talent",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/talent_list/talent_list",
+          "pathName": "pages/talent_list/talent_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/talent_show/talent_show",
+          "pathName": "pages/talent_show/talent_show",
+          "query": "id=1",
           "scene": null
         }
       ]

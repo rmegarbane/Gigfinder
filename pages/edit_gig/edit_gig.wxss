@@ -1,0 +1,6 @@
+/* pages/edit_gig/edit_gig.wxss */
+
+
+.btn-area {
+  display: flex;
+}

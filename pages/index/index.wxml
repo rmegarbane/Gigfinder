@@ -1,4 +1,15 @@
-<!--pages/index/index.wxml-->
+
+
+<view class="full-margin">
+  <!-- Change the page depending on what want -->
+  <view class="gigtalent-box">
+  <view class="button-category-spacing">
+    <view class = "button-category" bindtap="goToGigList"><h2>Gigs</h2></view> <view class = "button-category" bindtap="goToTalentList"><h2>Talents</h2></view>
+  </view>
+
+  <!-- <view class="search-form-control form-group">
+    <form action="form-control string required"></form> -->
+
 
 <!--banner -->
   <view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
@@ -24,6 +35,7 @@
   </view>
   
 
+
   <view class="title-container">
     <h2>Categories</h2>
   </view>
@@ -39,8 +51,15 @@
 <!-- Need to match backend userID -->
     <view class="h3">Recently posted</view>
     <view class="recently-posted-container">
-      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig}}" mark="{{gig}}">
-          <image class="card-image" src="https://source.unsplash.com/random/300×300/?skill"/>
+
+<!-- Resolved this conflict in github -->
+     <!-- <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig}}" mark="{{gig}}">
+          <image class="card-image" src="https://source.unsplash.com/random/300×300/?skill"/>  -->
+
+
+      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig.id}}" mark="{{gig}}">
+          <image class="card-image" src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80"/>
+
 
       <view class="card-info">
         <text>bold Title: {{gig.title}}: </text>
@@ -49,6 +68,7 @@
       </view>
     </view>
   </view>
+
 <!-- testing -->
 
 <!-- <view class="card-trip"></view>
@@ -62,7 +82,4 @@
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered">
           </view>  -->
         
-
-  
-
 </view>

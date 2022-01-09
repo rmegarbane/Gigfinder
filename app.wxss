@@ -50,4 +50,55 @@ button {
   background-color: #97BFB4;
 }
 
+.save-button {
+  padding: 20rpx;
+  width: 150rpx;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+  background-color:yellow;
+  font-weight: bolder;
+  color: black;
+  font-size: 20px;
+  /* padding: 8px 24px; */
+  border: black;
+  border-width: 50px;
+  border: 2px solid black;
+}
+
+.contact-button {
+  padding: 20rpx;
+  width: 150rpx;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+  background-color: green;
+  font-weight: bolder;
+  color: black;
+  font-size: 20px;
+  /* padding: 8px 24px; */
+  border: black;
+  border-width: 50px;
+  border: 2px solid black;
+}
+
+.share-button {
+  padding: 20rpx;
+  width: 150rpx;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+  background-color: lightskyblue;
+  font-weight: bolder;
+  color: black;
+  font-size: 20px;
+  /* padding: 8px 24px; */
+  border: black;
+  border-width: 50px;
+  border: 2px solid black;
+}
+
+
+
+
 
