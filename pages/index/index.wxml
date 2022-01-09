@@ -1,26 +1,28 @@
 <!--pages/index/index.wxml-->
-  <text>pages/index/index.wxml</text>
-<view class="full-margin">
-  <!-- Change the page depending on what want -->
-  <view class="button-category-spacing">
-    <view class = "button-category" bindtap="goToGigList"><h2>Gigs</h2></view> <view class = "button-category" bindtap=""><h2>Talents</h2></view>
+
+<!--banner -->
+  <view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
+  <view class="banner-container">
+    <h1>Waiguorent<strong> skills</strong> & <strong>creative people</strong>!</h1>
   </view>
+</view>
 
-  <!-- <view class="search-form-control form-group">
-    <form action="form-control string required"></form> -->
+<!-- Main-Menu-Card -->
+<view class="full-margin relative" style="top: -350rpx;">
+  <view class="grid grid-cols-2 main-container bg-white">
+    <view class="col-span-1 button-category" bindtap="goToGigList"><h2>Gigs</h2></view>
+    <view class="col-span-1 button-category" bindtap="goToTalentList"><h2>Talents</h2></view>
 
-    <text>space to search location</text>
-
-  <view class="search-container" style="width: 594rpx; height: 132rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx; position: relative">
-
-    <form bindsubmit="formSubmit">
-          <view class="search" style="width: 594rpx; height: 114rpx; display: flex; box-sizing: border-box">
-            <input style="width: 332rpx; height: 46rpx; display: block; box-sizing: border-box"  class="h4" type="text" name="query" placeholder="Search" />
-            <button class="search-icon" src="/pages/images/search.png" form-type="submit" style="position: relative; left: 290rpx; top: -1rpx"></button>
+    <view class="col-span-2 px60">
+      <input class="search-container " type="text" placeholder="Location"/>
+    </view>
+    <view class="col-span-2 box-b px60">
+      <input class="search-container " type="text" placeholder="Search"/>
+    </view>
+    
+    <view class="col-span-2 submit-button">Submit</view>
+  </view>
   
-          </view>
-    </form>
-  </view>  
 
   <view class="title-container">
     <h2>Categories</h2>
@@ -38,7 +40,7 @@
     <view class="h3">Recently posted</view>
     <view class="recently-posted-container">
       <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig}}" mark="{{gig}}">
-          <image class="card-image" src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80"/>
+          <image class="card-image" src="https://source.unsplash.com/random/300×300/?skill"/>
 
       <view class="card-info">
         <text>bold Title: {{gig.title}}: </text>
@@ -47,7 +49,19 @@
       </view>
     </view>
   </view>
+<!-- testing -->
 
+<!-- <view class="card-trip"></view>
+<img src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"/>
+<view class="card-trip-infos">
+           <view> 
+              <h2>Title here</h2>
+              <p>Short description here!</p>
+            </view> 
+            <h2 class="card-trip-pricing">£99.99</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered">
+          </view>  -->
+        
 
   
 
