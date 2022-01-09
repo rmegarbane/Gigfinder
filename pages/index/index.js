@@ -30,10 +30,17 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
-    const app = getApp()
-    const globalData = app.globalData
-    this.setData(globalData)
+    const page = this
+    wx.request({
+      url: 'http://localhost:3000/api/v1/gigs',
+      success: res => {
+        console.log(res)
+        page.setData(res.data)
+      }
+    })
+    // const app = getApp()
+    // const globalData = app.globalData
+    // this.setData(globalData)
 
   //   const app = getApp()
 

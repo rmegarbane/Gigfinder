@@ -29,17 +29,25 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
-    const id = options.id
-    const app = getApp()
-    const globalData = app.globalData
-    this.setData(globalData)
-    const gigs = globalData.gigs
-
-    let gig = gigs.filter(gig => gig.id == id)
-
     const page = this
-    page.setData(gig[0])
+    wx.request({
+      url: `1http://localhost:3000/api/v1/gigs/${options.id}`,
+      success: res => {
+        console.log(res)
+        page.setData(res.data)
+      }
+    })
+
+    // const id = options.id
+    // const app = getApp()
+    // const globalData = app.globalData
+    // this.setData(globalData)
+    // const gigs = globalData.gigs
+
+    // let gig = gigs.filter(gig => gig.id == id)
+
+    // const page = this
+    // page.setData(gig[0])
 
 
     // const page = this
