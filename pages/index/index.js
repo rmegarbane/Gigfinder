@@ -8,6 +8,12 @@ Page({
 
   },
 
+goToTalentList: function (e) {
+  wx.navigateTo({
+    url: `/pages/talent_list/talent_list`,
+  })
+},
+
   goToShowGig: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)

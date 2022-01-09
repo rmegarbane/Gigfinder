@@ -36,6 +36,23 @@ App({
   },
 
     globalData: {
+      users: [
+        {
+          "id": 1, 
+          "name": "edubro",
+          "image": "https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA1fHxwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+          "rate": "250/hr",
+          "description": "I am awesome, bro"
+        },
+        {
+          "id": 2, 
+          "name": "prettygurl",
+          "image": "https://images.unsplash.com/photo-1499651681375-8afc5a4db253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+          "rate": "130/hr",
+          "description": "I am so fashion"
+        }
+      ],
+
     gigs: [
       {
       "id": 1,

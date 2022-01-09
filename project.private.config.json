@@ -65,6 +65,24 @@
           "pathName": "pages/my_profile/my_profile",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/post_talent/post_talent",
+          "pathName": "pages/post_talent/post_talent",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/talent_list/talent_list",
+          "pathName": "pages/talent_list/talent_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/talent_show/talent_show",
+          "pathName": "pages/talent_show/talent_show",
+          "query": "id=1",
+          "scene": null
         }
       ]
     }
