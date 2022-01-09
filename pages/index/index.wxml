@@ -1,20 +1,15 @@
-
-
-<view class="full-margin">
+<!-- Need to match backend userID -->
   <!-- Change the page depending on what want -->
-  <view class="gigtalent-box">
-  <view class="button-category-spacing">
-    <view class = "button-category" bindtap="goToGigList"><h2>Gigs</h2></view> <view class = "button-category" bindtap="goToTalentList"><h2>Talents</h2></view>
-  </view>
+  <!-- <view class="gigtalent-box"> -->
+<!-- Need to match backend userID -->
 
   <!-- <view class="search-form-control form-group">
     <form action="form-control string required"></form> -->
 
-
 <!--banner -->
   <view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
   <view class="banner-container">
-    <h1>Waiguorent<strong> skills</strong> & <strong>creative people</strong>!</h1>
+    <h1>Gig Finder<strong> skills</strong> & <strong>creative people</strong>!</h1>
   </view>
 </view>
 
