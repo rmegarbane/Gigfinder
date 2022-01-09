@@ -7,7 +7,8 @@
     "pages/gig_list/gig_list",
     "pages/setup_profile/setup_profile", 
     "pages/my_gigs/my_gigs",
-    "pages/my_profile/my_profile"
+    "pages/my_profile/my_profile",
+    "pages/edit_gig/edit_gig"
   ],
   
   "window":{

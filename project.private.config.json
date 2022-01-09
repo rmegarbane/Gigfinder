@@ -55,6 +55,12 @@
           "scene": null
         },
         {
+          "name": "pages/edit_gig/edit_gig",
+          "pathName": "pages/edit_gig/edit_gig",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/my_profile/my_profile",
           "pathName": "pages/my_profile/my_profile",
           "query": "",

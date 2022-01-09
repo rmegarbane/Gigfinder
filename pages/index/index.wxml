@@ -1,7 +1,8 @@
-<!--pages/index/index.wxml-->
-  <text>pages/index/index.wxml</text>
+pages/index/index.wxml
+
 <view class="full-margin">
   <!-- Change the page depending on what want -->
+  <view class="gigtalent-box">
   <view class="button-category-spacing">
     <view class = "button-category" bindtap="goToGigList"><h2>Gigs</h2></view> <view class = "button-category" bindtap=""><h2>Talents</h2></view>
   </view>
@@ -21,6 +22,7 @@
           </view>
     </form>
   </view>  
+</view>
 
   <view class="title-container">
     <h2>Categories</h2>
@@ -47,8 +49,4 @@
       </view>
     </view>
   </view>
-
-
-  
-
 </view>

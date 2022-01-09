@@ -136,14 +136,7 @@
   justify-content: space-between;
   align-items: flex-end;
 } 
-.card-info h2 {
-  font-size: 32rpx;
-  font-weight: bold;
-}
-.card-info text {
-  font-size: 32rpx;
-  display: block;
-}
+
 
 
 .recently-posted-container {
@@ -171,6 +164,7 @@
   border: black;
   border-width: 24rpx;
   border: 6px solid lightgray;
+  color: black;
 }
 
 
@@ -183,6 +177,15 @@
   border-bottom-left-radius: 0rpx;
   border-bottom-right-radius: 0rpx;
   
+}
+
+.card-info h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.card-info text {
+  font-size: 32rpx;
+  display: block;
 }
 
 
