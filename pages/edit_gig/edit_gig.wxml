@@ -7,7 +7,7 @@
 
       <h2>Title</h2>
         <view class="text-area-wrap">
-          <textarea name="name" value="{{name}}" placeholder="Choose a title"/>
+          <textarea name="name" value="{{gig.title}}" placeholder="{{gig.title}}"/>
         </view>   
 
         <h2>Location</h2>
