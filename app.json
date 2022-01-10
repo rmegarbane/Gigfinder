@@ -42,7 +42,7 @@
         "selectedIconPath": "pages/images/plus.png",
         "text": "Add"
         }, {
-          "pagePath": "pages/index/index",
+          "pagePath": "pages/my_profile/my_profile",
           "iconPath": "pages/images/user.png",
           "selectedIconPath": "pages/images/user.png",
           "text": "Profile"

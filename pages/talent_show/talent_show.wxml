@@ -1,16 +1,18 @@
 <view class="page-section">
-  <h1>Look at this talented person!</h1>
+  <h1>Meet your new talent!</h1>
 </view>
-<view class="card-wrapper">
-  <view class="page-section"><h2>{{user.name}}</h2></view>
-  <view class="page-section"><image src="{{user.image}}"/></view>
-  <view class="page-section"><h2>{{user.rate}}</h2></view>
-  <view class="page-section"><h2>{{user.description}}</h2></view>
-</view>
-<view class="container">
-  <view class="button-section">
-    <view class="connect-button" bindtap=""><h2>Connect</h2></view>
-    <view class="connect-button" bindtap=""><h2>Connect</h2></view>
-    <view class="connect-button" bindtap=""><h2>Connect</h2></view>
+<view class="card-holder">
+  <view class="talent-card">
+  <image src="{{user.image}}"/>
+    <view class="talent-card-info"><h1>{{user.name}}</h1></view>
+    <view class="talent-card-info"><h2>{{user.talent}}</h2></view>  
+    <view class="talent-card-info"><text>{{user.description}}</text></view>  
+    <view class="talent-card-rate"><h2>{{user.rate}}</h2></view>
   </view>
 </view>
+
+  <view class="button-section">
+    <view class="connect-button" bindtap=""><h2>Connect</h2></view>
+    <view class="connect-button" bindtap=""><h2>Share</h2></view>
+    <view class="connect-button" bindtap=""><h2>Bookmark</h2></view>
+  </view>

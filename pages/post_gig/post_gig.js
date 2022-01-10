@@ -3,7 +3,6 @@ Page({
   data: {
   },
 
-
   bindSubmit: function (e) {
     const page = this
     const formData = e.detail.value
@@ -31,30 +30,23 @@ Page({
     })
   },
 
-
   onLoad: function (options) {
   },
-
 
   onReady: function () {
   },
 
-
   onShow: function () {
   },
-
 
   onHide: function () {
   },
 
-
   onUnload: function () {
   },
 
-
   onPullDownRefresh: function () {
   },
-
 
   onReachBottom: function () {
   },

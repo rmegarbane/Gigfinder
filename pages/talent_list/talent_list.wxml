@@ -1,13 +1,15 @@
-<h1>List of Talents</h1>
+<view class="banner">
+  <h1>Find your talent!</h1>
+</view> 
 
-<view class="page-section">
-      <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowUserTalent" class="recently-posted-card" data-id="{{user.id}}">
-      <image class="card-image" src="{{user.image}}" />
-
-      <view class="card-info">
-        <text>{{user.name}}: </text>
-          <text>{{user.rate}}</text> 
-
+  <view class="talent-cards-container">
+      <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="talent-card" data-id="{{user}}" mark="{{user}}">
+        <image class="talent-card-image" src="{{user.image}}" />
+      <view class="talent-card-info">
+        <h2>{{user.name}}</h2>
+        <text>{{user.talent}}</text> 
+        <text>Rate: {{user.rate}}</text> 
+        <!-- <text>{{user.description}}</text>  -->
       </view>
     </view>
   </view>
