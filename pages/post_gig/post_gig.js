@@ -15,6 +15,7 @@ Page({
     }
     wx.request({
       url: `${getApp().globalData.baseUrl}/gigs`,
+      // url: `http://localhost:3000/api/v1/gigs`,
       header,
       method: "POST",
       data: {
@@ -26,7 +27,7 @@ Page({
       }
     })
     wx.reLaunch({
-      url: '/pages/my_gigs/my_gigs',
+      url: '/pages/gig_list/gig_list',
     })
   },
 
