@@ -83,6 +83,12 @@
           "pathName": "pages/talent_show/talent_show",
           "query": "id=1",
           "scene": null
+        },
+        {
+          "name": "pages/talent_list/talent_list",
+          "pathName": "pages/talent_list/talent_list",
+          "query": "",
+          "scene": null
         }
       ]
     }

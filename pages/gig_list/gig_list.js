@@ -15,7 +15,7 @@ Page({
     console.log("Here", e)
     const id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/gig_show/gig_show`,
+      url: `/pages/gig_show/gig_show?id=${id}`,
     })
 
   },

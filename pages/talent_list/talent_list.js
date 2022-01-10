@@ -17,9 +17,20 @@ Page({
   },
 
   onLoad: function (options) {
+
+
     const app = getApp()
     const globalData = app.globalData
     this.setData(globalData)
+    
+    // const page = this
+    // wx.request({
+    //   url: 'http://localhost:3000/api/v1/users',
+    //   success: res => {
+    //     console.log(res)
+    //     page.setData(res.data)
+    //   }
+    // })
 
   },
 
