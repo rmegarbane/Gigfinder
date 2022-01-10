@@ -25,7 +25,10 @@ Page({
     console.log("Here", e)
     const gigIndex = e.target.dataset.index
     wx.navigateTo({
+
       url: `/pages/gig_show/gig_show?index=${gigIndex}`
+//    url: `/pages/gig_show/gig_show?id=${id}`,
+
     })
   },
 

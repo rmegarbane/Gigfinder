@@ -13,26 +13,89 @@ Page({
    */
   onLoad: function (options) {
 
-    const id = options.id
-    const app = getApp()
-    const globalData = app.globalData
-    this.setData(globalData)
-    const gigs = globalData.gigs
+    let page = this;
 
-    let gig = gigs.filter(gig => gig.id == id)
+    wx.showToast({
+      title: 'Loading...',
+      icon: 'loading',
+      duration: 1500
+    });
 
-    const page = this
-    page.setData(gig[0])
+
+    // Get story data from server (to show in form)
+    wx.request({
+      url: `http://localhost:3000/api/v1/gig/${options.id}`,
+      method: 'GET',
+      success(res) {
+        var gig = res.data;
+
+        // Update local data
+        page.setData(
+          gig
+        );
+
+        wx.hideToast();
+      }
+    });
+
+    // const page = this
+    // wx.request({
+    //   url: `http://localhost:3000/api/v1/gigs/${options.id}`,
+    //   success: res => {
+    //     console.log(res)
+    //     page.setData({gig: res.data})
+    //     wx.setNavigationBarTitle({
+    //       title: page.data.gig.title,
+    //     })
+    //   }
+    // })
+
+    // const id = options.id
+    // const app = getApp()
+    // const globalData = app.globalData
+    // this.setData(globalData)
+    // const gigs = globalData.gigs
+
+    // let gig = gigs.filter(gig => gig.id == id)
+
+    // const page = this
+    // page.setData(gig[0])
 
   },
 
   bindSubmit: function (e) {
-    const page = this
-    const gig = e.detail.value
-    const app = getApp()
-    const gigs = app.globalData.gigs
+    // const page = this
 
-    app.globalData.gigs[index] = gig
+    let title = e.detail.value.title;
+    let text = e.detail.value.text;
+    let id = this.data.id;
+
+    let gig = {
+      title: title,
+      text: text
+    }
+
+    // Update api data
+    wx.request({
+      url: `http://localhost:3000/api/v1/gigs/${id}`,
+      method: 'PUT',
+      data: gig,
+      success() {
+        // redirect to index page when done
+        wx.switchTab({
+          url: '/pages/index/index'
+        });
+      }
+    });
+
+
+
+
+    // const gig = e.detail.value
+    // const app = getApp()
+    // const gigs = app.globalData.gigs
+
+    // app.globalData.gigs[index] = gig
     
     // this line needs to  be uncomented once the information is coming through
     

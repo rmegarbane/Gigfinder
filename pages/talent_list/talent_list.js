@@ -138,6 +138,11 @@ Page({
   //   })
   // },
 
+    //     console.log(res)
+    //     page.setData(res.data)
+    //   }
+    // })
+
 
   onReady: function () {
   },
