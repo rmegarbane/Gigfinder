@@ -1,11 +1,7 @@
 // pages/index/index.js
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
   },
 
 goToTalentList: function (e) {
@@ -32,9 +28,7 @@ goToTalentList: function (e) {
     })
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
+ 
   onLoad: function (options) {
     const page = this
     wx.request({
