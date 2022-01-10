@@ -1,9 +1,55 @@
+.card-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.talent-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: inline-block;
+  width: 90%;
+  border-bottom-left-radius: 18rpx;
+  border-bottom-right-radius: 18rpx;
+
+  /* flex-wrap: wrap; */
+}
+.talent-card image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18rpx;
+  border-top-right-radius: 18rpx;
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+}
+
+.talent-card-info {
+  padding: 16rpx;
+}
+
+.talent-card-rate {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative; 
+}
+
+
+
+
+
+
 .button-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 30rpx;
 }
 
 .connect-button {

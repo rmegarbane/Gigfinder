@@ -5,31 +5,53 @@ Page({
    * Page initial data
    */
   data: {
-  
-
 
   },
+
+
+  // This exchanged for below code
+
+  // goToShowGig: function (e) {
+  //   console.log(e.currentTarget.dataset)
+  //   console.log("Here", e)
+  //   const id = e.currentTarget.dataset.id
+  //   wx.navigateTo({
+  //     url: `/pages/gig_show/gig_show`,
+  //   })
+  // },
 
   goToShowGig: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
-    const id = e.currentTarget.dataset.id
+    const gigIndex = e.target.dataset.index
     wx.navigateTo({
-      url: `/pages/gig_show/gig_show`,
+      url: `/pages/gig_show/gig_show?index=${gigIndex}`
     })
-
   },
+
+
+  // goToShow: function(e) {
+  //   const gigIndex = e.target.dataset.index
+  //   wx.navigateTo({
+  //     url: `/pages/gig_show/gig_show?index=${gigIndex}`
+  //   })
+// },
+
+
+
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
-  
-    const app = getApp()
-    const globalData = app.globalData
-    this.setData(globalData)
-
+    const page = this
+    wx.request({
+      url: 'http://localhost:3000/api/v1/gigs',
+      success: res => {
+        console.log(res)
+        page.setData(res.data)
+      }
+    })
   },
 
   /**

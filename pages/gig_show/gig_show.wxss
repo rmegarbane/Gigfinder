@@ -1,6 +1,5 @@
 /* pages/gig_show/gig_show.wxss */
 
-
 .card-product {
   background: #F5EEDC;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);

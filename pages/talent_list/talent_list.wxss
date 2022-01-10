@@ -1,9 +1,98 @@
 /* pages/talent_list/talent_list.wxss */
+.banner {
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
 
-.talent-card {
+.banner h1 {
+  color: #1F2022;
+  font-style: bold;
+  font-size: 72rpx;
+  /* top: 5%;
+  position: relative; */
+}
 
+.talent-cards-container {
+  /* grid-template-columns: repeat(200rpx, 2fr);  */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; 
 }
 
 .talent-card {
-  
+  width: 300rpx;
+  height: 100%;
+  background-color: #97BFB4;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 16rpx;
+  border-radius: 18rpx;
+  border: black;
+  border-width: 24rpx;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.talent-card-image {
+  object-fit: cover;
+  height: 200rpx;
+  width: 300rpx;
+  /* width: 100%; */
+  border-top: 0px;
+  border-top-left-radius: 18rpx;
+  border-top-right-radius: 18rpx;
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+}
+
+.talent-card-info {
+  padding: 12rpx;
+
+}
+
+.talent-card-info h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: black;
+}
+.talent-card-info text {
+  font-size: 32rpx;
+  display: block;
+  color: black;
+}
+
+
+
+/* pages/gig_list/gig_list.wxss */
+
+
+
+.gig-card {
+  background-color: #F5F5F5;
+  overflow: hidden;
+  box-shadow: 0 3rpx 3rpx rgba(0,0,0,0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 24rpx;
+  padding: 16rpx;
+  border-radius: 16rpx;
+}
+
+.gig-card-info {
+  padding: 12rpx;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gig-card-info h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.gig-card-info text {
+  font-size: 32rpx;
+  display: block;
+}
+

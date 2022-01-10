@@ -12,8 +12,6 @@ Page({
 
   },
 
-
-
   editGig: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
@@ -21,16 +19,13 @@ Page({
     wx.navigateTo({
       url: `/pages/edit_gig/edit_gig?id=${id}`,
     })
-
   },
 
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
     const page = this
     wx.request({
+      // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       success: res => {
         console.log(res)
