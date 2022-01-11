@@ -18,16 +18,17 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  background-color: #f7f7f7; 
 }
 
 .talent-card {
   width: 300rpx;
   height: 100%;
-  background-color: #97BFB4;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  margin: 16rpx;
-  border-radius: 18rpx;
+  background-color: #ffffff;
+  /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); */
+  margin: 10rpx;
+  border-radius: 12rpx;
   border: black;
   border-width: 24rpx;
   display: flex;
@@ -40,8 +41,8 @@
   width: 300rpx;
   /* width: 100%; */
   border-top: 0px;
-  border-top-left-radius: 18rpx;
-  border-top-right-radius: 18rpx;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
   border-bottom-left-radius: 0rpx;
   border-bottom-right-radius: 0rpx;
 }
