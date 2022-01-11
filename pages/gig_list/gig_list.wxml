@@ -5,10 +5,9 @@
       <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}">
       <view class="gig-card-info">
         <h2>{{gig.title}}</h2>
-        <text>Rate: {{gig.rate}}</text> 
-        <text>{{gig.description}}</text> 
+        <text>Rate: {{gig.rate}}</text>
+        <text>{{gig.description}}</text>
         <text>Location: {{gig.location}}</text>
       </view>
-
     </view>
   </view>

@@ -1,7 +1,6 @@
 // pages/gig_list/gig_list.js
 Page({
 
-
   data: {
   },
 
@@ -15,6 +14,16 @@ Page({
     })
   },
 
+//   goToShowGig: function (e) {
+//     console.log(e.currentTarget.dataset)
+//     console.log("Here", e)
+//     const gigIndex = e.target.dataset.index
+//     wx.navigateTo({
+//       url: `/pages/gig_show/gig_show?index=${gigIndex}`
+// //    url: `/pages/gig_show/gig_show?id=${id}`,
+//     })
+//   },
+
 
   // goToShow: function(e) {
   //   const gigIndex = e.target.dataset.index
@@ -22,6 +31,7 @@ Page({
   //     url: `/pages/gig_show/gig_show?index=${gigIndex}`
   //   })
 // },
+
 
 
   onLoad: function (options) {
@@ -36,45 +46,32 @@ Page({
   },
 
 
+
   onReady: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
+
   onShow: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
+
   onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
   },
 
  
-  onPullDownRefresh: function () {
-
+  onUnload: function () {
   },
 
 
+  onPullDownRefresh: function () {
+  },
+
+
+
   onReachBottom: function () {
-
-    
-
   },
 
 
   onShareAppMessage: function () {
-
   }
 })

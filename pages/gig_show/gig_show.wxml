@@ -1,3 +1,4 @@
+
 <view class="page-section">
   <h1>Gig Details</h1>
 </view>
@@ -20,6 +21,22 @@
       <view class="gig-card-info"><h2>Expiration: {{gig.expiration}}</h2></view>
       <view class="gig-card-info"><h2>Term: {{gig.term}}</h2></view>
     </view>
+
+<view class="page-section">
+  <h1>Gig Details</h1>
+</view>
+<view class="card-holder">
+  <view class="gig-card">
+    <image class="gig-card" src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG9mZmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"/>
+    <view class="gig-card-info"><h1>{{gig.title}}</h1></view>
+    <view class="gig-card-info"><h2>{{gig.location}}</h2></view>
+    <view class="gig-card-info"><h2>{{gig.rate}}</h2></view>  
+    <view class="gig-card-info"><text>{{gig.description}}</text></view>  
+
+    <view class="gig-card-info"><h2>Posted: {{gig.date_posted}}</h2></view>
+    <view class="gig-card-info"><h2>Expiration: {{gig.expiration}}</h2></view>
+    <view class="gig-card-info"><h2>Term: {{gig.term}}</h2></view>
+
   </view>
 </view>
 
@@ -38,20 +55,4 @@
         <view class="save-button">save</view>
         <view class="contact-button">chat</view>
         <view class="share-button">share</view>
-
-
-      </view>
-
-        <view class="controls">
-          <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
-
-          <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>
-
-        </view>
-
-
-
-    <!-- <button bindtap="goToEditPage">{{text}}Edit</button>
-    <button bindtap="goToEditPage">{{text}}Delete (edit)</button> --> 
-
-<!-- </view> -->
+      </view> -->
