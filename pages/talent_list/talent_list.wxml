@@ -3,7 +3,7 @@
 </view> 
 
   <view class="talent-cards-container">
-      <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="talent-card" data-id="{{user}}" mark="{{user}}">
+      <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="talent-card" data-id="{{user.id}}" mark="{{user}}">
         <image class="talent-card-image" src="{{user.image}}" />
       <view class="talent-card-info">
         <h2>{{user.name}}</h2>

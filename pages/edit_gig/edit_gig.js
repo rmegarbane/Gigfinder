@@ -1,4 +1,7 @@
 // pages/edit_gig/edit_gig.js
+
+let app = getApp()
+
 Page({
 
   /**
@@ -12,31 +15,44 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    wx.request({
+      header: wx.getStorageSync('headers'),
+      url: `http://localhost:3000/api/v1/gigs/${options.id}`,
+      success: res => {
+        console.log(res)
+        page.setData({gig: res.data})
+        wx.setNavigationBarTitle({
+          title: page.data.gig.title,
+        })
+      }
+    })
+  },
+    // let page = this;
 
-    let page = this;
+    // wx.showToast({
+    //   title: 'Loading...',
+    //   icon: 'loading',
+    //   duration: 1500
+    // });
 
-    wx.showToast({
-      title: 'Loading...',
-      icon: 'loading',
-      duration: 1500
-    });
 
 
     // Get story data from server (to show in form)
-    wx.request({
-      url: `http://localhost:3000/api/v1/gig/${options.id}`,
-      method: 'GET',
-      success(res) {
-        var gig = res.data;
+    // wx.request({
+    //   url: `http://localhost:3000/api/v1/gig/${options.id}`,
+    //   method: 'GET',
+    //   success(res) {
+    //     var gig = res.data;
 
-        // Update local data
-        page.setData(
-          gig
-        );
+    //     // Update local data
+    //     page.setData(
+    //       gig
+    //     );
 
-        wx.hideToast();
-      }
-    });
+    //     wx.hideToast();
+    //   }
+    // });
 
     // const page = this
     // wx.request({
@@ -61,32 +77,55 @@ Page({
     // const page = this
     // page.setData(gig[0])
 
-  },
+
 
   bindSubmit: function (e) {
-    // const page = this
 
-    let title = e.detail.value.title;
-    let text = e.detail.value.text;
-    let id = this.data.id;
-
-    let gig = {
-      title: title,
-      text: text
-    }
-
-    // Update api data
+    console.log(111, e.detail)
+    const gig = e.detail.value
+    
+    // Need these lines on every wx.request
+    const headers = wx.getStorageSync('headers')
+    const page = this
     wx.request({
-      url: `http://localhost:3000/api/v1/gigs/${id}`,
+      header: wx.getStorageSync('headers'),
+      // To here
+      url: `http://localhost:3000/api/v1/gigs/${page.data.gig.id}`,
       method: 'PUT',
-      data: gig,
-      success() {
-        // redirect to index page when done
+      data: {gig},
+      success: res => {
+        console.log('update gig result',res.data)
         wx.switchTab({
           url: '/pages/index/index'
         });
       }
-    });
+      })
+
+    // let gig ={
+    //   title: title,
+    //   description: description,
+    //   location: location,
+    //   rate: rate,
+    //   term: term
+    // }
+
+        // let title = e.detail.value.title;
+    // let text = e.detail.value.text;
+    // let id = this.data.id;
+
+    // let gig = {
+    //   title: title,
+    //   text: text
+    // }
+
+    // Update api data
+
+
+
+  
+
+
+
 
 
 
