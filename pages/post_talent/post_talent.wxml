@@ -10,8 +10,8 @@
       <h2>Pictures</h2>
       <text>Add a picture</text>
       <view class="image-holder">
-        <image src="{{res.tempFilePaths}}" mode="aspecFill"  bindlongtap="imgLongTap"/>
-        <image src="/pages/images/blank-avatar.png"/>
+        <image wx:if="{{src}}" src="{{src}}" mode="aspecFill"  bindlongtap="imgLongTap"/>
+        <image wx:if="{{!src}}" src="/pages/images/blank-avatar.png"/>
       </view>
 
       <view class="btn-area">

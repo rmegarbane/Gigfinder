@@ -1,18 +1,34 @@
 <view class="page-section">
   <h1>Meet your new talent!</h1>
 </view>
+
 <view class="card-holder">
+
   <view class="talent-card">
-  <image src="{{user.image}}"/>
-    <view class="talent-card-info"><h1>{{user.name}}</h1></view>
-    <view class="talent-card-info"><h2>{{user.talent}}</h2></view>  
-    <view class="talent-card-info"><text>{{user.description}}</text></view>  
-    <view class="talent-card-rate"><h2>{{user.rate}}</h2></view>
+  
+    <view class="talent-card-image-holder">
+    <image src="{{user.image}}"/>
+    </view>
+
+    <view class="info-holder">
+      <image src="/pages/images/favourite-heart.png" bindtap="listenerBookmark"/>
+      <view class="talent-card-info"><h1>{{user.name}}</h1></view>
+      <view class="talent-card-info"><h2>{{user.talent}}</h2></view>  
+      <view class="talent-card-info"><text>{{user.description}}</text></view>  
+      <view class="talent-card-rate"><h2>{{user.rate}}</h2></view>
+    </view>
   </view>
 </view>
 
+
+
   <view class="button-section">
+    
     <view class="connect-button" bindtap=""><h2>Connect</h2></view>
-    <view class="connect-button" bindtap=""><h2>Share</h2></view>
-    <view class="connect-button" bindtap=""><h2>Bookmark</h2></view>
+
+    <view bindtap="onShareAppMessage">
+      <view class="connect-button" open-type="share"><h2>Share</h2></view>
+    </view>
+    
+
   </view>
