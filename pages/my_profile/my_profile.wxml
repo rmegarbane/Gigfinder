@@ -1,16 +1,12 @@
-<view class="container">
+<view class="page-section">
   <h1>Dashboard</h1>
-
-  <view class="btn-area">
-    <button style="margin: 30rpx 0" bindtap="updateProfile">Update profile</button>
-  </view>
-  <view class="btn-area">
-    <button style="margin: 30rpx 0" bindtap="addTalent">Add a talent</button>
-  </view>
-  <view class="btn-area">
-    <button style="margin: 30rpx 0" bindtap="addGig">Add a gig</button>
-  </view>
-  <view class="btn-area">
-    <button style="margin: 30rpx 0" bindtap="viewAllGigs">View all gigs</button>
-  </view>
 </view>
+  <view class="btn-area">
+    <button class="connect-button" bindtap="updateProfile"><h2>Update profile</h2></button>
+
+    <button class="connect-button" bindtap="addTalent"><h2>Add a talent</h2></button>
+
+    <button class="connect-button" bindtap="addGig"><h2>Add a gig</h2></button>
+
+    <button class="connect-button" bindtap="viewAllGigs"><h2>View gigs</h2></button>
+  </view>

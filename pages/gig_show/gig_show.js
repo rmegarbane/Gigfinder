@@ -9,8 +9,18 @@ Page({
    * Page initial data
    */
   data: {
-
   },
+
+  listenerBookmark: function (event) {
+    console.log('clicked favorite');
+    console.log(event);
+    // how to make the image change color?
+    // event.toggle('img-darken');
+    wx.showToast({
+      title: 'Bookmarked',
+    })
+  },
+
 
   editGig: function (e) {
     console.log(e.currentTarget.dataset)

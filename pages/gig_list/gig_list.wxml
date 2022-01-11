@@ -1,8 +1,8 @@
-<view class="banner">
+<view class="page-section">
   <h1>List of Gigs</h1>
 </view> 
 <view class="gig-cards-container">
-      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig}}" mark="{{gig}}">
+      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}">
       <view class="gig-card-info">
         <h2>{{gig.title}}</h2>
         <text>Rate: {{gig.rate}}</text> 

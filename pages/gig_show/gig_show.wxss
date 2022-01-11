@@ -1,10 +1,32 @@
-/* pages/gig_show/gig_show.wxss */
 
-.card-product {
-  background: #F5EEDC;
+.card-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gig-card {
+  overflow: hidden;
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 5rpx;
-  height: 100vh;
+  display: inline-block;
+  width: 90%;
+  border-bottom-left-radius: 18rpx;
+  border-bottom-right-radius: 18rpx;
+
+  /* flex-wrap: wrap; */
+}
+
+.gig-card-image-holder image{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18rpx;
+  border-top-right-radius: 18rpx;
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+  /* background: url(https://picsum.photos/200/300); */
 }
 
 .card-image {
@@ -15,8 +37,19 @@
   object-fit: cover;
 }
 
+.info-holder {
 
-.card-info {
+}
+.info-holder image{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  float: inline-end;
+  top: 25rpx;
+  right: 30rpx;
+}
+
+.gig-card-info {
   padding: 12px;
   display: flex;
   justify-content: space-between;
@@ -24,11 +57,41 @@
   padding: 16px;
 } 
 
-.h2 {
+.gig-card-info h2{
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
+
+.button-section {
+  display: flex;
+  /* grid-template-columns: repeat(2, 2fr); */
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 30rpx;
+}
+
+.connect-button {
+  background-color: #97BFB4;
+  width: 200rpx;
+  height: 100rpx;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16rpx;
+  border-radius: 8rpx;
+}
+
+.connect-button h2 {
+  color: rgba(0, 0, 0, 0.644);
+}
+
+
+
+
+
 
 .p {
   font-size: 12px;

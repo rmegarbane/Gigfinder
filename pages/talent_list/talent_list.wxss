@@ -48,7 +48,7 @@
 
 .talent-card-info {
   padding: 12rpx;
-
+  
 }
 
 .talent-card-info h2 {

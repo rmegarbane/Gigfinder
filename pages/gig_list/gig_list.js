@@ -43,9 +43,6 @@ Page({
 
 
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
     const page = this
     wx.request({
@@ -57,9 +54,7 @@ Page({
     })
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+
   onReady: function () {
 
   },
@@ -85,25 +80,19 @@ Page({
 
   },
 
-  /**
-   * Page event handler function--Called when user drop down
-   */
+ 
   onPullDownRefresh: function () {
 
   },
 
-  /**
-   * Called when page reach bottom
-   */
+
   onReachBottom: function () {
 
     
 
   },
 
-  /**
-   * Called when user click on the top right corner to share
-   */
+
   onShareAppMessage: function () {
 
   }

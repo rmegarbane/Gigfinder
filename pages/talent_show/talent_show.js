@@ -1,6 +1,6 @@
+// const heart = document.querySelector("#heart")
 
 Page({
-
   data: {
     user: 
       {
@@ -12,7 +12,6 @@ Page({
         "description": "I am great on and off camera. I do lots of fun voices and have experience voicing cartoon characters as well as professional marketing videos."
       }
   },
-
   onLoad: function (options) {
     // comment this in when connected to backend data
 
@@ -34,6 +33,30 @@ Page({
     //   }
     // })
   },
+
+  listenerBookmark: function (event) {
+    console.log('clicked favorite');
+    console.log(event);
+    // how to make the image change color?
+    // event.toggle('img-darken');
+    wx.showToast({
+      title: 'Bookmarked',
+    })
+  },
+
+// Change tint of flower
+// flower.addEventListener('click', () => {
+//   console.log("you clicked the flower")
+//   flower.classList.toggle('img-darken');
+// });
+
+
+onShareAppMessage: function () {
+  console.log('share')
+  wx.showShareMenu({
+   withShareTicket: true
+  })
+},
 
   onReady: function () {
   },

@@ -16,7 +16,8 @@
 
   /* flex-wrap: wrap; */
 }
-.talent-card image {
+
+.talent-card-image-holder image{
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -24,6 +25,16 @@
   border-top-right-radius: 18rpx;
   border-bottom-left-radius: 0rpx;
   border-bottom-right-radius: 0rpx;
+  /* background: url(https://picsum.photos/200/300); */
+}
+
+.info-holder image{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  float: inline-end;
+  top: 25rpx;
+  right: 30rpx;
 }
 
 .talent-card-info {
@@ -38,14 +49,9 @@
   position: relative; 
 }
 
-
-
-
-
-
 .button-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(2, 2fr); */
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
