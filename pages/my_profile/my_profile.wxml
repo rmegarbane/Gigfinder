@@ -1,12 +1,23 @@
 <view class="page-section">
   <h1>Dashboard</h1>
 </view>
-  <view class="btn-area">
+
+<view class="card-holder">
+  <view class="info-card">
+    <view class="user-avatar">
+      <image src='{{userInfo.avatarUrl}}' class="avatar"/>
+      <!-- <image src='/pages/images/favourite-heart.png' class="avatar"/> -->
+    </view>
+    <view class="user-name">
+      <h2>{{userInfo.nickName}}</h2>
+      <!-- <h2>im a boss</h2> -->
+    </view>
+  </view>
+</view>
+
+  <view class="button-area">
     <button class="connect-button" bindtap="updateProfile"><h2>Update profile</h2></button>
-
     <button class="connect-button" bindtap="addTalent"><h2>Add a talent</h2></button>
-
     <button class="connect-button" bindtap="addGig"><h2>Add a gig</h2></button>
-
     <button class="connect-button" bindtap="viewAllGigs"><h2>View gigs</h2></button>
   </view>

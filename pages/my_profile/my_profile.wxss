@@ -1,26 +1,64 @@
-/* pages/my_profile/my_profile.wxss */
 
-.button-section {
+.card-holder {
   display: flex;
-  /* grid-template-columns: repeat(2, 2fr); */
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.info-card {
+  overflow: hidden;
+  display: inline-block;
+  width: 90%;
+  border-radius: 18rpx;
+  background-color: #F1E9E5;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  opacity: 0.8;
+}
+
+.user-avatar {
+  display: flex;
+  justify-content: center;
+  margin: 30rpx;
+}
+
+.user-name {
+  display: flex;
+  justify-content: center;
+  margin: 30rpx;
+}
+
+
+
+
+.button-area {
+  /* display: flex; */
+  /* grid-template-columns: repeat(4, 4fr);  */
+  align-items: center;
+  /* justify-content: space-around; */
+  /* flex-wrap: wrap; */
   margin: 30rpx;
 }
 
 .connect-button {
   background-color: #97BFB4;
-  width: 200rpx;
+  width: 100rpx;
   height: 100rpx;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   margin: 16rpx;
   border-radius: 8rpx;
 }
 
 .connect-button h2 {
   color: rgba(0, 0, 0, 0.644);
+}
+
+.avatar {
+  width:120rpx;
+  height:120rpx;
+  border-radius:50%;
 }

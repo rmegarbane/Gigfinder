@@ -47,7 +47,7 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.21.3",
   "appid": "wxe6bc52f655b59cf3",
   "projectname": "gigfinder",
   "debugOptions": {

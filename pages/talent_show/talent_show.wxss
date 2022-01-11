@@ -13,8 +13,6 @@
   width: 90%;
   border-bottom-left-radius: 18rpx;
   border-bottom-right-radius: 18rpx;
-
-  /* flex-wrap: wrap; */
 }
 
 .talent-card-image-holder image{

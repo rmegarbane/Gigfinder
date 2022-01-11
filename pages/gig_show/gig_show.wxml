@@ -23,35 +23,16 @@
   </view>
 </view>
 
+
   <view class="button-section">
-    <view class="connect-button" bindtap=""><h2>Connect</h2></view>
-    <view class="connect-button" bindtap=""><h2>Share</h2></view>
-    <!-- <view class="connect-button" bindtap=""><h2>Bookmark</h2></view> -->
+    <button class="connect-button" bindtap="getUserProfile">Share</button>
+    <button class="connect-button" bindtap="getUserProfile">Connect</button>
   </view>
+
+
 
   <view class="controls">
     <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
     <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>
   </view>
 
-      <!-- <view class="controls">
-        <view class="save-button">save</view>
-        <view class="contact-button">chat</view>
-        <view class="share-button">share</view>
-
-
-      </view>
-
-        <view class="controls">
-          <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
-
-          <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>
-
-        </view>
-
-
-
-    <!-- <button bindtap="goToEditPage">{{text}}Edit</button>
-    <button bindtap="goToEditPage">{{text}}Delete (edit)</button> --> 
-
-<!-- </view> -->
