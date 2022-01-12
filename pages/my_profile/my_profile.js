@@ -1,8 +1,9 @@
-// pages/my_profile/my_profile.js
+const app = getApp();
+
+
 Page({
   data: {
   },
-
 
   updateProfile: function(e) {
     wx.navigateTo({
@@ -15,7 +16,6 @@ Page({
       url: '/pages/post_talent/post_talent',
     })
   },
-
 
   addGig: function(e) {
     wx.reLaunch({
@@ -31,7 +31,9 @@ Page({
   },
 
 
-  onLoad: function (options) {
+  onLoad() {
+    const userInfo = app.globalData.userInfo
+    this.setData({ userInfo })
   },
 
   onReady: function () {

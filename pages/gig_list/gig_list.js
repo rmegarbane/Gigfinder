@@ -36,7 +36,7 @@ Page({
 
 
 
-
+  
   onLoad: function (options) {
     const page = this
     wx.request({
@@ -47,6 +47,9 @@ Page({
       }
     })
   },
+
+
+  onReady: function () {
 
 
   onReady: function () {
@@ -64,15 +67,24 @@ Page({
   onUnload: function () {
   },
 
+  onPullDownRefresh: function () {
+
 
   onPullDownRefresh: function () {
   },
+
+
+
+  onReachBottom: function () {
 
 
   onReachBottom: function () {
   },
 
 
+  onShareAppMessage: function () {
+
+    
   onShareAppMessage: function () {
   }
 })

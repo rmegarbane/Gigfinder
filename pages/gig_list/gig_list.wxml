@@ -1,4 +1,4 @@
-<view class="banner">
+<view class="page-section">
   <h1>List of Gigs</h1>
 </view> 
 <view class="gig-cards-container">

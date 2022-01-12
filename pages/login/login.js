@@ -24,7 +24,6 @@ Page({
     }
   },
 
-
   goToIndex: function (e) {
     console.log("clicked")
     wx.switchTab({ 
@@ -55,10 +54,7 @@ Page({
             })
           }
         })
-        // this.setData({
-        //   userInfo: res.userInfo,
-        //   hasUserInfo: true
-        // })
+
       }
     })
   },

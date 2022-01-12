@@ -5,11 +5,62 @@ let app = App()
 
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
+  },
 
+  getUserProfile(e) {
+    console.log("clicked info", e)
+    let page = this
+    wx.getUserProfile({
+      desc: 'got user profile',
+      success: (result) => {
+        console.log({result})
+        console.log("good job", app.globalData)
+        const user = wx.getStorageSync('user')
+        // updates part in backend and saves
+        app.globalData.userInfo = result.userInfo
+        wx.request({
+          url: `${app.globalData.url}/users/${user.id}`,
+          method: 'PUT', 
+          data: {
+            userInfo: result.userInfo
+          },
+
+          success: (res) => {
+            page.setData({
+              user: res.data.currentUser,
+              hasUserInfo: true
+            })
+            wx.switchTab({
+              url: '/pages/my_profile/my_profile',
+            })
+          }
+        })
+      }
+    })
+  },
+
+  // getUserInfo(e) {
+  //   console.log(e)
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true
+  //   })
+  //   wx.switchTab({
+  //     url: '/pages/my_profile/my_profile',
+  //   })
+  // },
+
+
+
+  listenerBookmark: function (event) {
+    console.log('clicked favorite');
+    console.log(event);
+    // how to make the image change color?
+    // event.toggle('img-darken');
+    wx.showToast({
+      title: 'Bookmarked',
+    })
   },
 
   editGig: function (e) {
@@ -20,7 +71,6 @@ Page({
       url: `/pages/edit_gig/edit_gig?id=${id}`,
     })
   },
-
 
   onLoad: function (options) {
     const page = this
@@ -83,39 +133,24 @@ Page({
 
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+
   onReady: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
+
   onShow: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
+
   onHide: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page unload
-   */
+
   onUnload: function () {
-
   },
 
-  /**
-   * Page event handler function--Called when user drop down
-   */
+ 
   onPullDownRefresh: function () {
-
   },
 
   /**

@@ -20,22 +20,23 @@ Page({
         console.log('success!')
         // tempFilePath can be used as the src attribute of the img tag to display pictures
         that.setData({
-          src: res.tempFilePaths
+          src: res.tempFilePaths[0]
         })
         console.log(res.tempFilePaths)
+        
         // const tempFilePaths = res.tempFilePaths
       }
     })
 
     // Get image info
-    wx.getImageInfo({
-      src: res.tempFilePaths[0],
-      success: function (res) {
-        console.log(res.width)
-        console.log(res.height)
-        console.log(res.path)
-      }
-    }) 
+    // wx.getImageInfo({
+    //   src: res.tempFilePaths[0],
+    //   success: function (res) {
+    //     console.log(res.width)
+    //     console.log(res.height)
+    //     console.log(res.path)
+    //   }
+    // }) 
   },
 
   onLoad: function (options) {
