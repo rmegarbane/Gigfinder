@@ -120,6 +120,7 @@ Page({
 
     const page = this
     wx.request({
+      header: wx.getStorageSync('headers'),
       url: 'http://localhost:3000/api/v1/users',
       success: res => {
         console.log("here's the user data ->", res)

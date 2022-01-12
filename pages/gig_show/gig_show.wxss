@@ -105,6 +105,7 @@
 
 .card-info {
   padding: 12px;
+}
 
 .info-holder {
 
