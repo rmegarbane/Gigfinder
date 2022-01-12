@@ -7,33 +7,38 @@
 
       <h2>Title</h2>
         <view class="text-area-wrap">
-          <textarea name="name" value="{{gig.title}}" placeholder="{{gig.title}}"/>
+          <textarea name="title" value="{{gig.title}}" placeholder="{{gig.title}}"/>
         </view>   
 
         <h2>Location</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{location}}" placeholder="Where is the gig?"/>
+          <textarea name="location" value="{{gig.location}}" placeholder="Where is the gig?"/>
+        </view>  
+
+        <h2>Description</h2>
+        <view class="text-area-wrap">
+          <textarea name="description" value="{{gig.description}}" placeholder="Where is the gig?"/>
         </view>   
 
       <h2>Rate</h2>
         <view class="text-area-wrap">
-          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge?"/>
+          <textarea name="rate" value="{{gig.rate}}" placeholder="How much do you charge?"/>
         </view>
 
       <h2>Date posted</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{date_posted}}" placeholder="Date posted"/>
+          <textarea name="date_posted" value="{{gig.date_posted}}" placeholder="Date posted"/>
         </view>   
 
       <h2>Term</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{term}}" placeholder="How long is the gig?"/>
+          <textarea name="term" value="{{gig.term}}" placeholder="How long is the gig?"/>
         </view>   
 
         
       <h2>Expiration</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{expiration}}" placeholder="When is it over?"/>
+          <textarea name="expiration" value="{{gig.expiration}}" placeholder="When is it over?"/>
         </view>        
      
 
