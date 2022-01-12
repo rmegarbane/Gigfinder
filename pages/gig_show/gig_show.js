@@ -20,6 +20,7 @@ Page({
         // updates part in backend and saves
         app.globalData.userInfo = result.userInfo
         wx.request({
+          header: wx.getStorageSync('headers'),
           url: `${app.globalData.url}/users/${user.id}`,
           method: 'PUT', 
           data: {

@@ -7,15 +7,11 @@ Page({
 
   bindSubmit: function (e) {
 
-    let gigs = {
-      title: e.detail.value.title,
-      description: e.detail.value.description,
-      location: e.detail.value.location,
-      rate: e.detail.value.rate,
-      term: e.detail.value.term
-    }
+    console.log(111, e.detail)
+    const gig = e.detail.value
 
     wx.request({
+      header: wx.getStorageSync('headers'),
       url: `http://localhost:3000/api/v1/gigs`,
       method: 'POST',
       data: {gig: gig},

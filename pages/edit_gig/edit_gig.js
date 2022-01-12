@@ -28,54 +28,7 @@ Page({
       }
     })
   },
-    // let page = this;
 
-    // wx.showToast({
-    //   title: 'Loading...',
-    //   icon: 'loading',
-    //   duration: 1500
-    // });
-
-
-
-    // Get story data from server (to show in form)
-    // wx.request({
-    //   url: `http://localhost:3000/api/v1/gig/${options.id}`,
-    //   method: 'GET',
-    //   success(res) {
-    //     var gig = res.data;
-
-    //     // Update local data
-    //     page.setData(
-    //       gig
-    //     );
-
-    //     wx.hideToast();
-    //   }
-    // });
-
-    // const page = this
-    // wx.request({
-    //   url: `http://localhost:3000/api/v1/gigs/${options.id}`,
-    //   success: res => {
-    //     console.log(res)
-    //     page.setData({gig: res.data})
-    //     wx.setNavigationBarTitle({
-    //       title: page.data.gig.title,
-    //     })
-    //   }
-    // })
-
-    // const id = options.id
-    // const app = getApp()
-    // const globalData = app.globalData
-    // this.setData(globalData)
-    // const gigs = globalData.gigs
-
-    // let gig = gigs.filter(gig => gig.id == id)
-
-    // const page = this
-    // page.setData(gig[0])
 
 
 
@@ -101,46 +54,6 @@ Page({
       }
       })
 
-    // let gig ={
-    //   title: title,
-    //   description: description,
-    //   location: location,
-    //   rate: rate,
-    //   term: term
-    // }
-
-        // let title = e.detail.value.title;
-    // let text = e.detail.value.text;
-    // let id = this.data.id;
-
-    // let gig = {
-    //   title: title,
-    //   text: text
-    // }
-
-    // Update api data
-
-
-
-  
-
-
-
-
-
-
-
-    // const gig = e.detail.value
-    // const app = getApp()
-    // const gigs = app.globalData.gigs
-
-    // app.globalData.gigs[index] = gig
-    
-    // this line needs to  be uncomented once the information is coming through
-    
-    // wx.reLaunch({
-    //   url: 'pages./index/index',
-    // })
   },
 
   /**
