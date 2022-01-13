@@ -1,4 +1,7 @@
-let app = getApp()
+// pages/gig_show/gig_show.js
+
+let app = App()
+
 
 Page({
 
@@ -63,7 +66,7 @@ Page({
   editGig: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
-    const id = e.currentTarget.dataset.id
+    const id = this.data.gig.id
     wx.navigateTo({
       url: `/pages/edit_gig/edit_gig?id=${id}`,
     })
@@ -72,6 +75,7 @@ Page({
   onLoad: function (options) {
     const page = this
     wx.request({
+      header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       success: res => {

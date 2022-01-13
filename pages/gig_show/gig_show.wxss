@@ -12,6 +12,71 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: inline-block;
   width: 90%;
+  border-radius: 18rpx;
+
+}
+
+.gig-card image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18rpx;
+  border-top-right-radius: 18rpx;
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+}
+
+.gig-card-info {
+  padding: 16rpx;
+}
+
+.gig-card-rate {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative; 
+}
+
+
+
+
+
+
+.button-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 30rpx;
+}
+
+.connect-button {
+  background-color: #97BFB4;
+  width: 200rpx;
+  height: 100rpx;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16rpx;
+  border-radius: 8rpx;
+}
+
+.connect-button h2 {
+  color: rgba(0, 0, 0, 0.644);
+}
+
+
+
+
+
+.card-product {
+  background: #F5EEDC;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: inline-block;
+  width: 90%;
   border-bottom-left-radius: 18rpx;
   border-bottom-right-radius: 18rpx;
 
@@ -36,6 +101,10 @@
   width: 100%;
   object-fit: cover;
 }
+
+
+.card-info {
+  padding: 12px;
 
 .info-holder {
 
