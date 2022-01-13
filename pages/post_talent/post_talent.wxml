@@ -25,7 +25,7 @@
 
       <h2>Rate</h2>
         <view class="text-area-wrap">
-          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge?"/>
+          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge? (XX/time period)"/>
         </view>
 
       <h2>Self-introduction</h2>
