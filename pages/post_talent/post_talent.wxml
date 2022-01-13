@@ -2,7 +2,7 @@
     <view class="page-section">
     <h1>Post your talent</h1>
 
-      <h2>Name</h2>
+      <!-- <h2>Name</h2>
         <view class="text-area-wrap">
           <textarea name="name" value="{{name}}" placeholder="Choose a username"/>
         </view>   
@@ -12,11 +12,11 @@
       <view class="image-holder">
         <image wx:if="{{src}}" src="{{src}}" mode="aspecFill"  bindlongtap="imgLongTap"/>
         <image wx:if="{{!src}}" src="/pages/images/blank-avatar.png"/>
-      </view>
+      </view> -->
 
-      <view class="btn-area">
+      <!-- <view class="btn-area">
         <button style="margin: 30rpx 0" bindtap="uploadImageButton">Upload Image</button>
-      </view>
+      </view> -->
 
       <h2>Talent</h2>
         <view class="text-area-wrap">
@@ -25,7 +25,7 @@
 
       <h2>Rate</h2>
         <view class="text-area-wrap">
-          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge?"/>
+          <textarea name="rate" value="{{rate}}" placeholder="How much do you charge? (XX/time period)"/>
         </view>
 
       <h2>Self-introduction</h2>

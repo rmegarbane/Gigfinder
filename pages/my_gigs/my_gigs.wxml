@@ -4,11 +4,12 @@
 
   <!-- This needs to be set up for specific user gigs (e.g. user.id.gig.title ?) -->
 
-    <view wx:for="{{gigs}}" wx:for-item="gig" class="gig-card" bindtap="goToShowGig" data-id="{{gig}}" mark="{{gig}}">
+    <view wx:for="{{gigs}}" wx:for-item="gig" class="gig-card" bindtap="goToShowGig" data-id="{{gig.id}}" mark="{{gig}}">
       <view class="name">{{gig.title}}</view>
       <view class="description">{{gig.description}}</view>
       <view class="rate">Rate: {{gig.rate}}</view>
       <view class="date-posted">Posted: {{gig.date_posted}}</view>
+      <button bindtap="goToEditGig">Edit / Delete Gig</button>
     </view>
 
   </view>

@@ -16,8 +16,16 @@
 </view>
 
   <view class="button-area">
-    <button class="connect-button" bindtap="updateProfile"><h2>Update profile</h2></button>
-    <button class="connect-button" bindtap="addTalent"><h2>Add a talent</h2></button>
-    <button class="connect-button" bindtap="addGig"><h2>Add a gig</h2></button>
-    <button class="connect-button" bindtap="viewAllGigs"><h2>View gigs</h2></button>
+    <!-- <view class="button-holder">
+      <button class="connect-button" bindtap="updateProfile"><h2>Edit profile</h2></button>
+    </view> -->
+    <view class="button-holder">
+      <button class="connect-button" bindtap="getUserProfile" data-action="addTalent"><h2>Add a talent</h2></button>
+    </view>
+    <view class="button-holder">
+      <button class="connect-button" bindtap="getUserProfile" data-action="addGig"><h2>Add a gig</h2></button>
+    </view>
+    <view class="button-holder">
+      <button class="connect-button" bindtap="getUserProfile" data-action="viewAllGigs"><h2>My gigs</h2></button>
+    </view>
   </view>
