@@ -24,6 +24,10 @@ Page({
     })
   },
 
+  goToEditGig: function (e) {
+
+  },
+
   onReady: function () {
   },
 

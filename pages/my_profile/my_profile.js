@@ -1,9 +1,54 @@
 const app = getApp();
 
-
 Page({
   data: {
   },
+
+  getUserProfile(e) {
+    console.log("clicked info", e)
+    const { action } = e.currentTarget.dataset
+    let page = this
+    wx.getUserProfile({
+      desc: 'got user profile',
+      success: (result) => {
+        console.log({result})
+        console.log("good job", app.globalData)
+        const user = wx.getStorageSync('user')
+        // updates part in backend and saves
+        app.globalData.userInfo = result.userInfo
+        wx.request({
+          url: `${app.globalData.url}/users/${user.id}`,
+          method: 'PUT', 
+          data: {
+            userInfo: result.userInfo
+          },
+
+          success: (res) => {
+            page.setData({
+              user: res.data.currentUser,
+              hasUserInfo: true
+            })
+            switch (action) {
+              case 'addTalent':
+                page.addTalent();
+                break;
+              case 'addGig':
+                page.addGig();
+                break;
+              case 'viewAllGigs':
+                page.viewAllGigs();
+                break;
+              default:
+            }
+            // wx.switchTab({
+            //   url: '/pages/my_profile/my_profile',
+            // })
+          }
+        })
+      }
+    })
+  },
+
 
   updateProfile: function(e) {
     wx.navigateTo({

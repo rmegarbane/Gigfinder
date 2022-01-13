@@ -39,7 +39,78 @@ Page({
     // }) 
   },
 
+  bindSubmit: function(e) {
+    console.log(e)
+    // let talent = e.detail.value.talent;
+    // let rate = e.detail.value.rate;
+    // let description = e.detail.description;
+    let id = this.data.id;
+
+    // let user = {
+    //   talent: talent,
+    //   rate: rate,
+    //   description: description
+    // }
+    let user = e.detail.value
+    // Update api data
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${id}`,
+      method: 'PUT',
+      data: {user: user},
+      success() {
+        // redirect to dashboard page when done
+        wx.redirectTo({
+          url: '/pages/talent_list/talent_list'
+        });
+      }
+    });
+  },
+
+
+  // getUserProfile(e) {
+  //   console.log("clicked info", e)
+  //   let page = this
+  //   wx.getUserProfile({
+  //     desc: 'got user profile',
+  //     success: (result) => {
+  //       console.log({result})
+  //       console.log("good job", app.globalData)
+  //       const user = wx.getStorageSync('user')
+  //       // updates part in backend and saves
+  //       app.globalData.userInfo = result.userInfo
+  //       wx.request({
+  //         url: `${app.globalData.url}/users/${user.id}`,
+  //         method: 'PUT', 
+  //         data: {
+  //           userInfo: result.userInfo
+  //         },
+
+  //         success: (res) => {
+  //           page.setData({
+  //             user: res.data.currentUser,
+  //             hasUserInfo: true
+  //           })
+  //           wx.switchTab({
+  //             url: '/pages/my_profile/my_profile',
+  //           })
+  //         }
+  //       })
+  //     }
+  //   })
+  // },
+
+
+
+
+
+
+
+
+
+
   onLoad: function (options) {
+    const user = wx.getStorageSync('user')
+    this.setData(user)
   },
 
 

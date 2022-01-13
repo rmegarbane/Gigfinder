@@ -9,7 +9,7 @@
       <view class="description">{{gig.description}}</view>
       <view class="rate">Rate: {{gig.rate}}</view>
       <view class="date-posted">Posted: {{gig.date_posted}}</view>
-      <button>Edit / Delete</button>
+      <button bindtap="goToEditGig">Edit / Delete Gig</button>
     </view>
 
   </view>
