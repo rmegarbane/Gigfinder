@@ -73,6 +73,23 @@ Page({
     })
   },
 
+  deleteGig: function (e) {
+    const page = this
+
+    wx.request({
+    header: wx.getStorageSync('headers'),
+    url: `http://localhost:3000/api/v1/gigs/${page.data.gig.id}`,
+    method: 'DELETE',
+    success: res => {
+      wx.switchTab({
+        url: '/pages/index/index'
+      });
+    }
+  })
+
+  },
+  
+
   onLoad: function (options) {
     const page = this
     wx.request({
@@ -117,26 +134,26 @@ Page({
     // })
   },
 
-  deleteGig: function (e) {
-    const id = e. currentTarget.dataset.id
+  // deleteGig: function (e) {
+  //   const id = e. currentTarget.dataset.id
 
-    const app = getApp()
-    const globalData = app.globalData
-    const gigs = globalData.gigs
+  //   const app = getApp()
+  //   const globalData = app.globalData
+  //   const gigs = globalData.gigs
 
-    const index = gigs.findIndex(r => r.id == id )
+  //   const index = gigs.findIndex(r => r.id == id )
 
-    app.globalData.gigs.splice(index, 1)
+  //   app.globalData.gigs.splice(index, 1)
 
-    wx.reLaunch ({
-      url: '/pages/index/index',
-    })
+  //   wx.reLaunch ({
+  //     url: '/pages/index/index',
+  //   })
 
-  },
+  // },
 
 
-  onReady: function () {
-  },
+  // onReady: function () {
+  // },
 
 
   onShow: function () {

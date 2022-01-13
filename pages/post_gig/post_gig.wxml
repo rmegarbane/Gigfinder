@@ -2,30 +2,51 @@
     <view class="page-section">
     <h1>Post a gig</h1>
 
-      <h2>Title</h2>
+    <h2>Title</h2>
         <view class="text-area-wrap">
-          <textarea name="title" value="{{gig.title}}" placeholder="e.g. Chinese teacher"/>
+          <textarea name="title" value="{{gig.title}}" placeholder="What is the title of your gig?"/>
         </view>   
 
-      <h2>Description</h2>
+        <h2>Location</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{gig.description}}" placeholder="e.g. Looking for someone to teach spoken Chinese to a high school student"/>
-        </view>
+          <textarea name="location" value="{{gig.location}}" placeholder="Where is the gig?"/>
+        </view>  
 
-      <h2>Location</h2>
+        <h2>Description</h2>
         <view class="text-area-wrap">
-          <textarea name="location" value="{{gig.location}}" placeholder="e.g. Shanghai, Jingan district"/>
-        </view>        
+          <textarea name="description" value="{{gig.description}}" placeholder="Where is the gig?"/>
+        </view>   
 
       <h2>Rate</h2>
         <view class="text-area-wrap">
-          <textarea name="rate" value="{{gig.rate}}" placeholder="e.g. 250-300/hr"/>
-        </view>     
+          <textarea name="rate" value="{{gig.rate}}" placeholder="How much do you charge?"/>
+        </view>
 
-      <h2>Start date</h2>
+        <h2>Category</h2>
         <view class="text-area-wrap">
-          <textarea name="term" value="{{gig.term}}" placeholder="e.g. 250-300/hr"/>
-        </view>     
+          <textarea name="category_id" value="{{gig.category_id}}" placeholder="Category"/>
+        </view>   
+
+      <h2>Date posted</h2>
+        <view class="text-area-wrap">
+          <textarea name="date_posted" value="{{gig.date_posted}}" placeholder="Date posted"/>
+        </view>   
+
+      <h2>Term</h2>
+        <view class="text-area-wrap">
+          <textarea name="term" value="{{gig.term}}" placeholder="How long is the gig?"/>
+        </view>   
+
+        
+      <h2>Expiration</h2>
+        <view class="text-area-wrap">
+          <textarea name="expiration" value="{{gig.expiration}}" placeholder="When is it over?"/>
+        </view>        
+     
+
+
+
+     
 
       <view class="btn-area">
           <button style="margin: 30rpx 0" formType="submit">Submit gig</button>
