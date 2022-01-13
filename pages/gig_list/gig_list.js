@@ -50,7 +50,7 @@ Page({
 
 
   onReady: function () {
-
+  },
 
   onReady: function () {
   },
@@ -68,7 +68,7 @@ Page({
   },
 
   onPullDownRefresh: function () {
-
+  },
 
   onPullDownRefresh: function () {
   },
@@ -76,14 +76,14 @@ Page({
 
 
   onReachBottom: function () {
-
+  },
 
   onReachBottom: function () {
   },
 
 
   onShareAppMessage: function () {
-
+  },
     
   onShareAppMessage: function () {
   }
