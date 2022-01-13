@@ -18,6 +18,7 @@ Page({
     const page = this
     console.log("here are the options", options)
     wx.request({
+      header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       url: `http://localhost:3000/api/v1/users/${options.id}`,
       success: res => {

@@ -174,8 +174,8 @@
 
 
 .card-image {
-  object-fit: cover;
-  height: 200rpx;
+  object-fit:contain;
+  height: 400rpx;
   width: 100%;
   /* border-radius: 24rpx; */
   border-top: 0px;
@@ -305,4 +305,36 @@
   border-bottom: solid 2px;
   border-color: rgb(250, 250, 250);
   width: 100%;
+}
+
+.icon-mini {
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 80px;
+}
+.main-container-2{
+  /* height: 400px; */
+  background-color: rgb(0, 255, 106);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.small-container-1{
+  background-color: rgb(255, 255, 255);
+}
+
+.small-container-2{
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 0 0 15px 15px;
+}
+
+.small-container-4{
+  background-color: rgb(255, 255, 255);
+  display: flex; justify-content: between;
+}
+
+.small-container-5{
+  display: flex; flex-grow: 1;
+  align-items: center;
 }

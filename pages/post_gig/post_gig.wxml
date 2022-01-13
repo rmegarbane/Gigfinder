@@ -4,27 +4,27 @@
 
       <h2>Title</h2>
         <view class="text-area-wrap">
-          <textarea name="title" value="{{title}}" placeholder="e.g. Chinese teacher"/>
+          <textarea name="title" value="{{gig.title}}" placeholder="e.g. Chinese teacher"/>
         </view>   
 
       <h2>Description</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{description}}" placeholder="e.g. Looking for someone to teach spoken Chinese to a high school student"/>
+          <textarea name="description" value="{{gig.description}}" placeholder="e.g. Looking for someone to teach spoken Chinese to a high school student"/>
         </view>
 
       <h2>Location</h2>
         <view class="text-area-wrap">
-          <textarea name="location" value="{{location}}" placeholder="e.g. Shanghai, Jingan district"/>
+          <textarea name="location" value="{{gig.location}}" placeholder="e.g. Shanghai, Jingan district"/>
         </view>        
 
       <h2>Rate</h2>
         <view class="text-area-wrap">
-          <textarea name="rate" value="{{rate}}" placeholder="e.g. 250-300/hr"/>
+          <textarea name="rate" value="{{gig.rate}}" placeholder="e.g. 250-300/hr"/>
         </view>     
 
       <h2>Start date</h2>
         <view class="text-area-wrap">
-          <textarea name="term" value="{{term}}" placeholder="e.g. 250-300/hr"/>
+          <textarea name="term" value="{{gig.term}}" placeholder="e.g. 250-300/hr"/>
         </view>     
 
       <view class="btn-area">

@@ -30,7 +30,6 @@
   </view>
 
 
-
   <view class="controls">
     <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
     <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>

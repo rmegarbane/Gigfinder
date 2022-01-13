@@ -1,10 +1,11 @@
 // pages/gig_list/gig_list.js
 Page({
 
-
   data: {
   },
 
+
+  // This exchanged for below code
 
   goToShowGig: function (e) {
     console.log(e.currentTarget.dataset)
@@ -15,6 +16,16 @@ Page({
     })
   },
 
+//   goToShowGig: function (e) {
+//     console.log(e.currentTarget.dataset)
+//     console.log("Here", e)
+//     const gigIndex = e.target.dataset.index
+//     wx.navigateTo({
+//       url: `/pages/gig_show/gig_show?index=${gigIndex}`
+// //    url: `/pages/gig_show/gig_show?id=${id}`,
+//     })
+//   },
+
 
   // goToShow: function(e) {
   //   const gigIndex = e.target.dataset.index
@@ -24,6 +35,8 @@ Page({
 // },
 
 
+
+  
   onLoad: function (options) {
     const page = this
     wx.request({
@@ -37,44 +50,41 @@ Page({
 
 
   onReady: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
+  onReady: function () {
+  },
+
+
   onShow: function () {
-
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
+
   onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
   },
 
  
-  onPullDownRefresh: function () {
+  onUnload: function () {
+  },
 
+  onPullDownRefresh: function () {
+  },
+
+  onPullDownRefresh: function () {
   },
 
 
+
   onReachBottom: function () {
+  },
 
-    
-
+  onReachBottom: function () {
   },
 
 
   onShareAppMessage: function () {
-
+  },
+    
+  onShareAppMessage: function () {
   }
 })
