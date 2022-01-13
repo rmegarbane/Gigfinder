@@ -15,31 +15,11 @@ Page({
       url: `/pages/gig_show/gig_show?id=${id}`,
     })
   },
-
-//   goToShowGig: function (e) {
-//     console.log(e.currentTarget.dataset)
-//     console.log("Here", e)
-//     const gigIndex = e.target.dataset.index
-//     wx.navigateTo({
-//       url: `/pages/gig_show/gig_show?index=${gigIndex}`
-// //    url: `/pages/gig_show/gig_show?id=${id}`,
-//     })
-//   },
-
-
-  // goToShow: function(e) {
-  //   const gigIndex = e.target.dataset.index
-  //   wx.navigateTo({
-  //     url: `/pages/gig_show/gig_show?index=${gigIndex}`
-  //   })
-// },
-
-
-
   
   onLoad: function (options) {
     const page = this
     wx.request({
+      header: wx.getStorageSync('headers'),
       url: 'http://localhost:3000/api/v1/gigs',
       success: res => {
         console.log(res)
