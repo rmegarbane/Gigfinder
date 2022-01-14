@@ -30,6 +30,8 @@ page {
   --blueGradient: linear-gradient(to left, #0575e6, #021b79);
   --bottomSafe: env(safe-area-inset-bottom);
 
+
+
   /* fonts */
   font-family: 'nunito', sans-serif;
 
@@ -41,7 +43,7 @@ page {
   /* content f28 */
   color: var(--grey);
   font-size: 32rpx;
-  background-color: #FFF;
+  background-color: #f5f5f5;
 }
 
 .wrapper {

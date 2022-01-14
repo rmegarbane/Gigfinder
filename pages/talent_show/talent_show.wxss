@@ -11,8 +11,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: inline-block;
   width: 90%;
-  border-bottom-left-radius: 18rpx;
-  border-bottom-right-radius: 18rpx;
+  border-radius: 18rpx;
 }
 
 .talent-card-image-holder image{
@@ -27,6 +26,7 @@
 }
 
 .info-holder image{
+
   width: 50rpx;
   height: 50rpx;
   position: relative;

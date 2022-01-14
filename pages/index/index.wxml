@@ -36,7 +36,6 @@
 
 <!--Category scroll through -->
 
-
 <!-- I commented this out for now - uncomment when working on category scroll bar. -MA 1/14/2022 -->
 
  <!-- <view class="page-section-spacing">
@@ -49,24 +48,29 @@
 
 
 <!-- Recently posted container -->
-<view class="title-container"></view>
-<h2>Recently Posted</h2>
+<view class="title-container">
+  <h2>Find a professional</h2>
+</view>
+  
  <view class="recently-posted-container">
   
 <!-- Recently posted cards -->
 <view class="full-margin relative px30 grid grid-cols-2 gap-30">
-  <view class="main-container-2" style="width: 100%;">
-    <image src="https://source.unsplash.com/random/?people" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
 
+
+  <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="main-container-2" style="width: 100%;" data-id="{{user.id}}" mark="{{user}}">
+  
+  
+    <image src="{{user.image}}" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
     <view class="small-container-2 px30 py30 box-b">
         <view class="small-container-3 mb20">
-          <h2>AStronaut</h2>
+          <h2>{{user.talent}}</h2>
         </view>
           
         <view class="small-container-4">
           <view class="small-container-5">
             <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
-            <h2> Adam </h2>
+            <h2>{{user.name}}</h2>
           </view>
 
           <view class="small-container-6">
@@ -77,98 +81,12 @@
         </view>
     </view>
   </view>
-  <view class="main-container-2" style="width: 100%;">
-    <image src="https://source.unsplash.com/random/?person" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
-
-    <view class="small-container-2 px30 py30 box-b">
-        <view class="small-container-3 mb20">
-          <h2>Barista</h2>
-        </view>
-          
-        <view class="small-container-4">
-          <view class="small-container-5">
-            <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
-            <h2> Bacon </h2>
-          </view>
-
-          <view class="small-container-6">
-            <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
-            <p> 9</p>
-          </view>
-
-        </view>
-    </view>
-  </view>
-  <view class="main-container-2" style="width: 100%;">
-    <image src="https://source.unsplash.com/random/?people" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
-
-    <view class="small-container-2 px30 py30 box-b">
-        <view class="small-container-3 mb20">
-          <h2>AStronaut</h2>
-        </view>
-          
-        <view class="small-container-4">
-          <view class="small-container-5">
-            <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
-            <h2> Adam </h2>
-          </view>
-
-          <view class="small-container-6">
-            <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
-            <p> 9</p>
-          </view>
-
-        </view>
-    </view>
-  </view>
-  <view class="main-container-2" style="width: 100%;">
-    <image src="https://source.unsplash.com/random/?person" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
-
-    <view class="small-container-2 px30 py30 box-b">
-        <view class="small-container-3 mb20">
-          <h2>Barista</h2>
-        </view>
-          
-        <view class="small-container-4">
-          <view class="small-container-5">
-            <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
-            <h2> Bacon </h2>
-          </view>
-
-          <view class="small-container-6">
-            <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
-            <p> 9</p>
-          </view>
-
-        </view>
-    </view>
-  </view>
-
-
 
 </view>
 
 
-
-
-<!-- Resolved this conflict in github -->
-     <!-- <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig}}" mark="{{gig}}">
-          <image class="card-image" src="https://source.unsplash.com/random/300×300/?skill"/>  -->
+</view>   
 
 
 
-
-
-
-
-      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig.id}}" mark="{{gig}}">
-        <image class="card-image" src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80"/>
-        <view class="card-info">
-          <text>bold Title: {{gig.title}}: </text>
-          <text>Rate:  {{gig.rate}}</text> 
-        </view>
-      </view>
-
-  </view>
-        
 </view>

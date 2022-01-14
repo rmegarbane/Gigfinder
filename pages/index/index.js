@@ -19,6 +19,15 @@ goToTalentList: function (e) {
     })
   },
 
+  goToShowTalent: function(e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/talent_show/talent_show?id=${id}`,
+    })
+  },
+
   goToGigList: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
@@ -33,7 +42,7 @@ goToTalentList: function (e) {
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: 'http://localhost:3000/api/v1/gigs',
+      url: 'http://localhost:3000/api/v1/users',
       success: res => {
         console.log(res)
         page.setData(res.data)
