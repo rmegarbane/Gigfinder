@@ -1,6 +1,7 @@
-// pages/gig_show/gig_show.js
 
-let app = App()
+let app = getApp()
+// let app = App()
+
 
 
 Page({
