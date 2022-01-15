@@ -1,11 +1,7 @@
 // pages/index/index.js
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
   },
 
 goToTalentList: function (e) {
@@ -23,6 +19,15 @@ goToTalentList: function (e) {
     })
   },
 
+  goToShowTalent: function(e) {
+    console.log(e.currentTarget.dataset)
+    console.log("Here", e)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/talent_show/talent_show?id=${id}`,
+    })
+  },
+
   goToGigList: function (e) {
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
@@ -32,35 +37,18 @@ goToTalentList: function (e) {
     })
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
+ 
+  onShow: function () {
     const page = this
     wx.request({
-      url: 'http://localhost:3000/api/v1/gigs',
+      header: wx.getStorageSync('headers'),
+      url: 'http://localhost:3000/api/v1/users',
       success: res => {
         console.log(res)
         page.setData(res.data)
       }
     })
-    // const app = getApp()
-    // const globalData = app.globalData
-    // this.setData(globalData)
-
-  //   const app = getApp()
-
-  //   Page({
-  //     data: { gigs: app.globalData.gigs }
-  //   })
-
-  // },
-
-  // goToShow: function(e) {
-  //   const gigIndex = e.target.dataset.index
-  //   wx.navigateTo({
-  //     url: `/pages/gig_show/gig_show?index=${gigIndex}`
-  //   })
+    
   },
 
 
@@ -74,9 +62,9 @@ goToTalentList: function (e) {
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  // onShow: function () {
 
-  },
+  // },
 
   /**
    * Lifecycle function--Called when page hide

@@ -7,9 +7,9 @@
     <form action="form-control string required"></form> -->
 
 <!--banner -->
-  <view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
+<view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
   <view class="banner-container">
-    <h1>Gig Finder<strong> skills</strong> & <strong>creative people</strong>!</h1>
+    <h1>Giggle<strong> skills</strong> & <strong>creative people</strong>!</h1>
   </view>
 </view>
 
@@ -29,52 +29,64 @@
     <view class="col-span-2 submit-button">Submit</view>
   </view>
   
-
-
+<!-- category title -->
   <view class="title-container">
     <h2>Categories</h2>
   </view>
-  <!--Catergory scroll through -->
 
-  <view class="page-section-spacing">
+<!--Category scroll through -->
+
+<!-- I commented this out for now - uncomment when working on category scroll bar. -MA 1/14/2022 -->
+
+ <!-- <view class="page-section-spacing">
         <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
           <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
           <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
           <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
         </scroll-view>
-    </view>
-<!-- Need to match backend userID -->
-    <view class="h3">Recently posted</view>
-    <view class="recently-posted-container">
-
-<!-- Resolved this conflict in github -->
-     <!-- <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig}}" mark="{{gig}}">
-          <image class="card-image" src="https://source.unsplash.com/random/300×300/?skill"/>  -->
+    </view> -->
 
 
-      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="recently-posted-card" data-id="{{gig.id}}" mark="{{gig}}">
-          <image class="card-image" src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80"/>
+<!-- Recently posted container -->
+<view class="title-container">
+  <h2>Find a professional</h2>
+</view>
+  
+ <view class="recently-posted-container">
+  
+<!-- Recently posted cards -->
+<view class="full-margin relative px30 grid grid-cols-2 gap-30">
 
 
-      <view class="card-info">
-        <text>bold Title: {{gig.title}}: </text>
-          <text>Rate:  {{gig.rate}}</text> 
+  <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="main-container-2" style="width: 100%;" data-id="{{user.id}}" mark="{{user}}">
+  
+  
+    <image src="{{user.image}}" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
+    <view class="small-container-2 px30 py30 box-b">
+        <view class="small-container-3 mb20">
+          <h2>{{user.talent}}</h2>
+        </view>
+          
+        <view class="small-container-4">
+          <view class="small-container-5">
+            <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
+            <h2>{{user.name}}</h2>
+          </view>
 
-      </view>
+          <view class="small-container-6">
+            <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
+            <p> 9</p>
+          </view>
+
+        </view>
     </view>
   </view>
 
-<!-- testing -->
+</view>
 
-<!-- <view class="card-trip"></view>
-<img src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"/>
-<view class="card-trip-infos">
-           <view> 
-              <h2>Title here</h2>
-              <p>Short description here!</p>
-            </view> 
-            <h2 class="card-trip-pricing">£99.99</h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered">
-          </view>  -->
-        
+
+</view>   
+
+
+
 </view>
