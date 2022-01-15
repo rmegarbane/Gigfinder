@@ -1,4 +1,6 @@
 let app = getApp()
+// let app = App()
+
 
 Page({
 

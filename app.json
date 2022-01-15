@@ -15,16 +15,15 @@
   
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#FFF",
-    "navigationBarTitleText": "GigFinder",
+    "navigationBarBackgroundColor": "#C7DED7",
+    "navigationBarTitleText": "Giggle",
     "navigationBarTextStyle":"black"
   },
 
     "tabBar": {
-        "backgroundColor": "#FFFFFF",
-        "borderStyle": "black",
-        "selectedColor": "#131313",
-        "color": "#131313",  
+        "backgroundColor": "#C7DED7",
+        "selectedColor": "#BA5B6E",
+        "color": "black",  
         "list": [{
           "pagePath": "pages/index/index",
           "iconPath": "pages/images/home2.png",

@@ -47,7 +47,7 @@ textarea {
 /* wx element */
 button {
   width: 50%;
-  background-color: #97BFB4;
+  background-color: #7C99AC;
 }
 
 .save-button {

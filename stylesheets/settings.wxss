@@ -41,7 +41,7 @@ page {
   /* content f28 */
   color: var(--grey);
   font-size: 32rpx;
-  background-color: #D3DEDC;
+  background-color: #EEF4F3;
 }
 
 .wrapper {
