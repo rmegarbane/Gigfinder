@@ -42,7 +42,9 @@ goToTalentList: function (e) {
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
+
       url: 'http://localhost:3000/api/v1/users',
+
       success: res => {
         console.log(res)
         page.setData(res.data)

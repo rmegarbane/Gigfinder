@@ -10,7 +10,9 @@ Page({
     const page = this
     console.log("here are the options", options)
     wx.request({
+
       // This line below seems to interfere with userInfo functionality?
+
       header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
       url: `http://localhost:3000/api/v1/users/${options.id}`,
@@ -24,6 +26,42 @@ Page({
     })
   },
 
+// <<<<<<< profile-login
+// =======
+//   getUserProfile(e) {
+//     console.log("clicked info", e)
+//     let page = this
+//     wx.getUserProfile({
+//       desc: 'got user profile',
+//       success: (result) => {
+//         console.log({result})
+//         console.log("good job", app.globalData)
+//         const user = wx.getStorageSync('user')
+//         // updates part in backend and saves
+//         app.globalData.userInfo = result.userInfo
+//         wx.request({
+//           url: `${app.globalData.url}/users/${user.id}`,
+//           method: 'PUT', 
+//           data: {
+//             userInfo: result.userInfo
+//           },
+
+//           success: (res) => {
+//             page.setData({
+//               user: res.data.currentUser,
+//               hasUserInfo: true
+//             })
+//             wx.switchTab({
+//               url: '/pages/my_profile/my_profile',
+//             })
+//           }
+//         })
+//       }
+//     })
+//   },
+
+
+// >>>>>>> master
   getUserProfile(e) {
     console.log("clicked info", e)
     let page = this

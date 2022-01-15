@@ -36,15 +36,19 @@
 
 <!--Category scroll through -->
 
+
 <!-- I commented this out for now - uncomment when working on category scroll bar. -MA 1/14/2022 -->
 
  <!-- <view class="page-section-spacing">
+
         <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
           <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
           <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
           <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
         </scroll-view>
+
     </view> -->
+
 
 
 <!-- Recently posted container -->
@@ -82,10 +86,12 @@
     </view>
   </view>
 
+
 </view>
 
 
 </view>   
+
 
 
 
