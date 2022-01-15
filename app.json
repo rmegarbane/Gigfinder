@@ -10,13 +10,14 @@
     "pages/edit_gig/edit_gig",
     "pages/post_talent/post_talent", 
     "pages/talent_list/talent_list",
-    "pages/talent_show/talent_show"
+    "pages/talent_show/talent_show",
+    "pages/my_inquiries/my_inquiries"
   ],
   
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#C7DED7",
-    "navigationBarTitleText": "Giggle",
+    "navigationBarTitleText": "Giggle: Find talent, post gigs.",
     "navigationBarTextStyle":"black"
   },
 

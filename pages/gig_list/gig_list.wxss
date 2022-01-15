@@ -32,11 +32,15 @@
   display: block;
 }
 
+
+.banner {
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
 .banner h1 {
   color: #1F2022;
   font-style: bold;
   font-size: 72rpx;
-  top: 5%;
-  position: relative;
-  text-align: center;
-}
+} 
