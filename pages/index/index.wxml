@@ -8,16 +8,17 @@
 
 <!--banner -->
 <view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
-  <view class="banner-container">
-    <h1>Giggle<strong> skills</strong> & <strong>creative people</strong>!</h1>
+  <view class="banner">
+    <view class="page-section"><h1>Giggle</h1></view>
+    <view class="page-section"><h2>Connecting creative people with gig work!</h2></view>
   </view>
 </view>
 
 <!-- Main-Menu-Card -->
 <view class="full-margin relative" style="top: -350rpx;">
   <view class="grid grid-cols-2 main-container bg-white">
-    <view class="col-span-1 button-category" bindtap="goToGigList"><h2>Gigs</h2></view>
-    <view class="col-span-1 button-category" bindtap="goToTalentList"><h2>Talents</h2></view>
+    <view class="col-span-1 button-category" bindtap="goToGigList"><h2>Search Gigs</h2></view>
+    <view class="col-span-1 button-category" bindtap="goToTalentList"><h2>Find Talent</h2></view>
 
     <view class="col-span-2 px60">
       <input class="search-container " type="text" placeholder="Location"/>

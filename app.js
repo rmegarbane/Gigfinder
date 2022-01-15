@@ -28,17 +28,44 @@ App({
     })
   },
 
- 
-  //   gigs: [
-  //     {title: "Juggler", description: "Performer with the ability to juggle", location: "Shanghai", rate: "$300", date_posted: "01/03/2022", term: "1 day", expiration: "01/26/2022" }
-  //   ],
+  getUserProfile(e) {
+    console.log("clicked info", e)
+    let page = this
+    wx.getUserProfile({
+      desc: 'got user profile',
+      success: (result) => {
+        console.log({result})
+        console.log("good job", app.globalData)
+        const user = wx.getStorageSync('user')
+        // updates part in backend and saves
+        app.globalData.userInfo = result.userInfo
+        wx.request({
+          header: wx.getStorageSync('headers'),
+          url: `${app.globalData.url}/users/${user.id}`,
+          method: 'PUT', 
+          data: {
+            userInfo: result.userInfo
+          },
+
+          success: (res) => {
+            page.setData({
+              user: res.data.currentUser,
+              hasUserInfo: true
+            })
+            wx.switchTab({
+              url: '/pages/my_profile/my_profile',
+            })
+          }
+        })
+      }
+    })
+  },
+
  globalData: {
     userInfo: null,
     // LOCAL HOST IS FOR LOCAL RAILS S. NOT PRODUCTION
     url: "http://localhost:3000/api/v1",
     // PRODUCTION API (MAY NOT HAVE ALL THE LATEST CHANGES & UPDATES FROM BACKEND)
     //  url: "http://gig-finder-api.wogengapp.cn/api/v1"
-
   }
-
 })
