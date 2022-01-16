@@ -1,7 +1,6 @@
 // pages/post_talent/post_talent.js
 Page({
 
-
   data: {
   },
 

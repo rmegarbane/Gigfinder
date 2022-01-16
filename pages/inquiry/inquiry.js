@@ -1,37 +1,56 @@
 const app = getApp()
-// pages/my_inquiries/my_inquiries.js
+
+// pages/inquiry/inquiry.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
   },
 
-  onLoad: function (options) {
-    const page = this
+
+  bindSubmit: function (e) {
+    console.log("COMMENT HERE:", e.detail.value.message)
+    // get user id
     const user_id = wx.getStorageSync('user').id
+    // get gig id
+    const gig_id = this.data.gig_id
+    const message = e.detail.value.message
+    // POST request here
     wx.request({
-      url: `${app.globalData.url}/inquiries`,
-      method: 'GET',
+      url: `${app.globalData.url}/gigs/${gig_id}/inquiries`,
+      method: 'POST',
       header: wx.getStorageSync('headers'), 
-      data: { user_id },
+      data: { message, user_id },
       success(res) {
         console.log(res)
-        page.setData({inquiries: res.data.inquiries})
-        wx.setNavigationBarTitle({
-          title: "YOUR CONNECTIONS",
-        })
+        if (res.statusCode == 200) {
+          wx.showToast({
+            title: 'Sent!',
+          })
+          wx.navigateBack({
+            delta: 1,
+          })
+        }
       }
     })
   },
+
+
+
+  onLoad: function (options) {
+    this.setData({gig_id: Number(options.gig_id)})
+  },
+
 
   onReady: function () {
 
   },
 
-
+  /**
+   * Lifecycle function--Called when page show
+   */
   onShow: function () {
 
   },

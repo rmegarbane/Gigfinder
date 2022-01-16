@@ -89,6 +89,12 @@
           "pathName": "pages/talent_list/talent_list",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/inquiry/inquiry",
+          "pathName": "pages/inquiry/inquiry",
+          "query": "",
+          "scene": null
         }
       ]
     }
