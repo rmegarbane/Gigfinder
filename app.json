@@ -11,7 +11,8 @@
     "pages/post_talent/post_talent", 
     "pages/talent_list/talent_list",
     "pages/talent_show/talent_show",
-    "pages/my_inquiries/my_inquiries"
+    "pages/my_inquiries/my_inquiries",
+    "pages/inquiry/inquiry"
   ],
   
   "window":{

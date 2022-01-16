@@ -19,7 +19,6 @@ Page({
 
   onLoad: function (options) {
     // comment this back when resolved jbuilder issue -AM 1-10-2022
-
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
@@ -46,7 +45,6 @@ Page({
     //     page.setData(res.data)
     //   }
     // })
-
 
   onReady: function () {
   },
