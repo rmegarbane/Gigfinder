@@ -17,9 +17,9 @@
 <!-- Main-Menu-Card -->
 <view class="full-margin relative" style="top: -350rpx;">
   <view class="grid grid-cols-2 main-container bg-white">
+    <view class="col-span-1 {{currentTab=='talent'?'tab-active':'tab-inactive'}} pb20 row-center" data-tab="talent" bindtap="switchTab"><h2>Talents</h2></view>
+    <view class="col-span-1 {{currentTab=='gig'?'tab-active':'tab-inactive'}} pb20 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
 
-    <view class="col-span-1 button-category" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
-    <view class="col-span-1 button-category" data-tab="talent" bindtap="switchTab"><h2>Talents</h2></view>
 
 
     <!-- <view class="col-span-2 px60">
