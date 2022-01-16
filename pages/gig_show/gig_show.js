@@ -45,17 +45,6 @@ Page({
     })
   },
 
-  // getUserInfo(e) {
-  //   console.log(e)
-  //   this.setData({
-  //     userInfo: e.detail.userInfo,
-  //     hasUserInfo: true
-  //   })
-  //   wx.switchTab({
-  //     url: '/pages/my_profile/my_profile',
-  //   })
-  // },
-
 
 
   listenerBookmark: function (event) {
@@ -63,6 +52,17 @@ Page({
     console.log(event);
     // how to make the image change color?
     // event.toggle('img-darken');
+    const page = this
+    wx.request({
+      header: wx.getStorageSync('headers'),
+      url: `http://localhost:3000/api/v1/gigs/${this.data.gig.id}/gig_bookmarks`,
+      method: 'POST',
+      success: (res) => {
+        console.log(res)
+        page.setData({gig:res.data})
+      }
+
+    })
     wx.showToast({
       title: 'Bookmarked',
     })
@@ -188,6 +188,11 @@ Page({
    * Called when user click on the top right corner to share
    */
   onShareAppMessage: function () {
-
+    const { gig } = this.data
+    return {
+      title: `Opportunity as a ${gig.title}`,
+      imageUrl: "https://batch-707.oss-cn-beijing.aliyuncs.com/for_hire.jpg",
+      path: `/pages/gig_show/gig_show?id=${gig.id}`
+    }
   }
 })
