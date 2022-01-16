@@ -347,3 +347,46 @@
   display: flex; flex-grow: 1;
   align-items: center;
 }
+
+/* pages/gig_list/gig_list.wxss */
+
+.gig-cards-container {
+  grid-template-columns: auto;
+}
+
+.gig-card {
+  background-color: #F5F5F5;
+  overflow: hidden;
+  box-shadow: 0 3rpx 3rpx rgba(0,0,0,0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 24rpx;
+  padding: 16rpx;
+  border-radius: 16rpx;
+}
+
+.gig-card-info {
+  padding: 12rpx;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gig-card-info h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.gig-card-info text {
+  font-size: 32rpx;
+  display: block;
+}
+
+.banner h1 {
+  color: #1F2022;
+  font-style: bold;
+  font-size: 72rpx;
+  top: 5%;
+  position: relative;
+  text-align: center;
+}

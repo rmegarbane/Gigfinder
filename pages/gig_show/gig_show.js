@@ -96,6 +96,8 @@ Page({
 
   onLoad: function (options) {
     const page = this
+    const user = wx.getStorageSync('user')
+    page.setData({user})
     wx.request({
       header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,

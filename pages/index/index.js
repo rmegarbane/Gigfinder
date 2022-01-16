@@ -2,6 +2,7 @@
 Page({
 
   data: {
+    currentTab: "talent"
   },
 
 
@@ -33,21 +34,58 @@ goToTalentList: function (e) {
     })
   },
 
-  goToGigList: function (e) {
+  switchTab: function (e) {
+    const page = this
     console.log(e.currentTarget.dataset)
     console.log("Here", e)
-    const id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: `/pages/gig_list/gig_list?id=${id}`,
+    const tab = e.currentTarget.dataset.tab
+    this.setData({currentTab: tab})
+    if (tab==='talent') {
+    this.fetchTalents()
+    }
+    else {
+      this.fetchGigs()
+    }
+    // wx.navigateTo({
+    //   url: `/pages/gig_list/gig_list?id=${id}`,
+    // })
+  },
+
+  fetchTalents: function (query= null) {
+    const page= this
+    wx.request({
+      header: wx.getStorageSync('headers'),
+      
+      url: `http://localhost:3000/api/v1/users${query? '?query=' + query :''}`,
+
+      success: res => {
+        console.log(res)
+        page.setData(res.data)
+      }
+    })
+  },
+
+  fetchGigs: function (query= null) {
+    const page= this
+    wx.request({
+      header: wx.getStorageSync('headers'),
+      
+      url: `http://localhost:3000/api/v1/gigs${query? '?query=' + query :''}`,
+
+      success: res => {
+        console.log(res)
+        page.setData(res.data)
+      }
     })
   },
 
  
   onShow: function () {
     const page = this
+    this.setData({currentTab: 'talent'})
     wx.request({
       header: wx.getStorageSync('headers'),
-
+      
       url: 'http://localhost:3000/api/v1/users',
 
       success: res => {
@@ -58,7 +96,20 @@ goToTalentList: function (e) {
     
   },
 
+  onSearchInput: function (e) {
+    this.setData({query: e.detail.value})
+  },
 
+  search: function (e) {
+    const query= this.data.query
+    if (this.data.currentTab== 'talent') {
+      this.fetchTalents(query)
+    }
+    else {
+      this.fetchGigs(query)
+    }
+
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */

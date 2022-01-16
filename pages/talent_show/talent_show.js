@@ -133,6 +133,17 @@ Page({
     console.log(event);
     // how to make the image change color?
     // event.toggle('img-darken');
+    const page = this
+    wx.request({
+      header: wx.getStorageSync('headers'),
+      url: `http://localhost:3000/api/v1/users/${this.data.user.id}/talent_bookmarks`,
+      method: 'POST',
+      success: (res) => {
+        console.log(res)
+        page.setData({user:res.data})
+      }
+
+    })
     wx.showToast({
       title: 'Bookmarked',
     })

@@ -17,17 +17,19 @@
 <!-- Main-Menu-Card -->
 <view class="full-margin relative" style="top: -350rpx;">
   <view class="grid grid-cols-2 main-container bg-white">
-    <view class="col-span-1 button-category" bindtap="goToGigList"><h2>Search Gigs</h2></view>
-    <view class="col-span-1 button-category" bindtap="goToTalentList"><h2>Find Talent</h2></view>
 
-    <view class="col-span-2 px60">
+    <view class="col-span-1 button-category" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+    <view class="col-span-1 button-category" data-tab="talent" bindtap="switchTab"><h2>Talents</h2></view>
+
+
+    <!-- <view class="col-span-2 px60">
       <input class="search-container " type="text" placeholder="Location"/>
-    </view>
+    </view> -->
     <view class="col-span-2 box-b px60">
-      <input class="search-container " type="text" placeholder="Search"/>
+      <input name='query' bindinput="onSearchInput" class="search-container " type="text" placeholder="Search"/>
     </view>
     
-    <view class="col-span-2 submit-button">Submit</view>
+    <view class="col-span-2 submit-button" bindtap="search">Submit</view>
   </view>
   
 <!-- category title -->
@@ -60,7 +62,7 @@
  <view class="recently-posted-container">
   
 <!-- Recently posted cards -->
-<view class="full-margin relative px30 grid grid-cols-2 gap-30">
+<view wx:if="{{currentTab=='talent'}}" class="full-margin relative px30 grid grid-cols-2 gap-30">
 
 
   <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="main-container-2" style="width: 100%;" data-id="{{user.id}}" mark="{{user}}">
@@ -89,6 +91,16 @@
 
 
 </view>
+<view wx:if="{{currentTab=='gig'}}" class="gig-cards-container">
+      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}">
+      <view class="gig-card-info">
+        <h2>{{gig.title}}</h2>
+        <text>Rate: {{gig.rate}}</text>
+        <text>{{gig.description}}</text>
+        <text>Location: {{gig.location}}</text>
+      </view>
+    </view>
+  </view>
 
 
 </view>   
