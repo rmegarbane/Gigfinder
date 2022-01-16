@@ -14,7 +14,7 @@
 
         <h2>Description</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{gig.description}}" placeholder="Where is the gig?"/>
+          <textarea name="description" value="{{gig.description}}" placeholder="Write the key information."/>
         </view>   
 
       <h2>Rate</h2>

@@ -75,6 +75,7 @@ Page({
         wx.request({
           url: `${app.globalData.url}/users/${user.id}`,
           method: 'PUT', 
+          header: wx.getStorageSync('headers'),
           data: {
             userInfo: result.userInfo
           },

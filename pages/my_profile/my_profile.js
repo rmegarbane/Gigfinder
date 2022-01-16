@@ -8,49 +8,57 @@ Page({
     console.log("clicked info", e)
     const { action } = e.currentTarget.dataset
     let page = this
-    wx.getUserProfile({
-      desc: 'got user profile',
-      success: (result) => {
-        console.log({result})
-        console.log("good job", app.globalData)
-        const user = wx.getStorageSync('user')
-        // updates part in backend and saves
-        app.globalData.userInfo = result.userInfo
-        wx.request({
-          url: `${app.globalData.url}/users/${user.id}`,
-          method: 'PUT', 
-          data: {
-            userInfo: result.userInfo
-          },
-
-          success: (res) => {
-            page.setData({
-              user: res.data.currentUser,
-              hasUserInfo: true
-            })
-            switch (action) {
-              case 'addTalent':
-                page.addTalent();
-                break;
-              case 'addGig':
-                page.addGig();
-                break;
-              case 'viewAllGigs':
-                page.viewAllGigs();
-                break;
-              case 'viewInquiries':
-                page.viewInquiries();
-                break;                
-              default:
+    const { user } = this.data
+    if (!user.name && !user.image) {
+      wx.getUserProfile({
+        desc: 'got user profile',
+        success: (result) => {
+          console.log({result})
+          console.log("good job", app.globalData)
+          const user = wx.getStorageSync('user')
+          // updates part in backend and saves
+          app.globalData.userInfo = result.userInfo
+          wx.request({
+            url: `${app.globalData.url}/users/${user.id}`,
+            method: 'PUT', 
+            header: wx.getStorageSync('headers'),
+            data: {
+              userInfo: result.userInfo
+            },
+            success: (res) => {
+              page.setData({
+                user: res.data.currentUser,
+                hasUserInfo: true
+              })
+              page.goToMenu(action)
             }
-            // wx.switchTab({
-            //   url: '/pages/my_profile/my_profile',
-            // })
-          }
-        })
-      }
-    })
+          })
+        }
+      })
+    } else {
+      page.goToMenu(action)
+    }
+    
   },
+
+   goToMenu(action) {
+     const page = this
+      switch (action) {
+        case 'addTalent':
+          page.addTalent();
+          break;
+        case 'addGig':
+          page.addGig();
+          break;
+        case 'viewAllGigs':
+          page.viewAllGigs();
+          break;
+        case 'viewInquiries':
+          page.viewInquiries();
+          break;                
+        default:
+      }
+   },
 
 
   updateProfile: function(e) {
@@ -85,8 +93,9 @@ Page({
   },
 
   onLoad() {
-    const userInfo = app.globalData.userInfo
-    this.setData({ userInfo })
+    // const userInfo = app.globalData.userInfo
+    const user = wx.getStorageSync('user')
+    this.setData({ user })
   },
 
   onReady: function () {

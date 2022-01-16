@@ -1,6 +1,4 @@
 <!--pages/edit_gig/edit_gig.wxml-->
-<text>pages/edit_gig/edit_gig.wxml</text>
-
 <form bindsubmit="bindSubmit">
     <view class="page-section">
     <h1>Edit your gig</h1>
