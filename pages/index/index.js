@@ -5,6 +5,11 @@ Page({
     currentTab: "talent"
   },
 
+
+
+
+
+
 goToTalentList: function (e) {
   wx.navigateTo({
     url: `/pages/talent_list/talent_list`,

@@ -1,0 +1,16 @@
+<view class="page-section">
+  <h1>Your connections</h1>
+</view> 
+
+<view class="gig-cards-container">
+    <view wx:for="{{inquiries}}" wx:for-item="inquiry" class="gig-card" data-id="{{inquiry.id}}">
+      <view class="gig-card-info">
+        <h2>Message: {{inquiry.message}}</h2>
+        <text>From User # {{inquiry.user_id}}</text>
+        <text>Regarding your gig# {{inquiry.gig_id}}</text>
+        <!-- <button bindtap="confirmReceipt">Received</button> -->
+      </view>
+
+    </view>
+  </view>
+

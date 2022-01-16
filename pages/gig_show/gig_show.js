@@ -9,7 +9,7 @@ Page({
   data: {
   },
 
-  getUserProfile(e) {
+  connect(e) {
     console.log("clicked info", e)
     let page = this
     wx.getUserProfile({
@@ -33,9 +33,12 @@ Page({
               user: res.data.currentUser,
               hasUserInfo: true
             })
-            wx.switchTab({
-              url: '/pages/my_profile/my_profile',
+            wx.navigateTo({
+              url: `/pages/inquiry/inquiry?gig_id=${page.data.gig.id}`,
             })
+            // wx.switchTab({
+            //   url: '/pages/my_profile/my_profile',
+            // })
           }
         })
       }

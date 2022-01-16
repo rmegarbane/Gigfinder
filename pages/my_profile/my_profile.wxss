@@ -64,6 +64,7 @@
 
 .connect-button h2 {
   color: rgba(0, 0, 0, 0.644);
+  font-size: medium;
 }
 
 .avatar {

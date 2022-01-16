@@ -25,8 +25,8 @@
 
 
   <view class="button-section">
-    <button class="connect-button" bindtap="getUserProfile">Share</button>
-    <button class="connect-button" bindtap="getUserProfile">Connect</button>
+    <button class="connect-button">Share</button>
+    <button class="connect-button" bindtap="connect">Connect</button>
   </view>
 
 

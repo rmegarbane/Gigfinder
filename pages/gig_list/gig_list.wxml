@@ -1,5 +1,5 @@
 <view class="page-section">
-  <h1>List of Gigs</h1>
+  <h1>All Gigs</h1>
 </view> 
 <view class="gig-cards-container">
       <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}">

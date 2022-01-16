@@ -38,6 +38,9 @@ Page({
               case 'viewAllGigs':
                 page.viewAllGigs();
                 break;
+              case 'viewInquiries':
+                page.viewInquiries();
+                break;                
               default:
             }
             // wx.switchTab({
@@ -75,6 +78,11 @@ Page({
     })
   },
 
+  viewInquiries: function(e) {
+    wx.navigateTo({
+      url: '/pages/my_inquiries/my_inquiries',
+    })
+  },
 
   onLoad() {
     const userInfo = app.globalData.userInfo
