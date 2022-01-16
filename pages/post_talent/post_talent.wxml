@@ -1,26 +1,25 @@
 <form bindsubmit="bindSubmit">
     <view class="page-section">
-    <h1>Post your talent</h1>
-
+    <h1>Update profile</h1>
+    <view class="form-group">
      <h2>Name</h2>
         <view class="text-area-wrap">
           <textarea name="name" value="{{name}}" placeholder="Choose a username"/>
         </view>   
 
-      <h2>Pictures</h2>
-      <text>Add a picture</text>
+      <h2>Picture</h2>
       <view class="image-holder">
         <image wx:if="{{src}}" src="{{src}}" mode="aspecFill"  bindlongtap="imgLongTap"/>
         <image wx:if="{{!src}}" src="/pages/images/blank-avatar.png"/>
       </view> 
 
       <view class="btn-area">
-        <button style="margin: 30rpx 0" bindtap="uploadImageButton">Upload Image</button>
+        <button style="margin: 30rpx 0" bindtap="uploadImageButton">Choose image</button>
       </view>
 
       <h2>Talent</h2>
         <view class="text-area-wrap">
-          <textarea name="talent" value="{{talent}}" placeholder="What service are you offering?"/>
+          <textarea name="talent" value="{{talent}}" placeholder="What service are you offering? Be descriptive!"/>
         </view>   
 
       <h2>Rate</h2>
@@ -30,12 +29,13 @@
 
       <h2>Self-introduction</h2>
         <view class="text-area-wrap">
-          <textarea name="description" value="{{description}}" placeholder="Say something about yourself!"/>
+          <textarea name="description" value="{{description}}" placeholder="Briefly describe yourself."/>
         </view>        
 
       <view class="btn-area">
           <button style="margin: 30rpx 0" formType="submit">Submit</button>
           <button style="margin: 30rpx 0" formType="reset">Reset form</button>
       </view>
+    </view>
     </view>
   </form>

@@ -5,11 +5,11 @@
 <view class="card-holder">
   <view class="info-card">
     <view class="user-avatar">
-      <image src='{{userInfo.avatarUrl}}' class="avatar"/>
+      <image src='{{user.image}}' class="avatar"/>
       <!-- <image src='/pages/images/favourite-heart.png' class="avatar"/> -->
     </view>
     <view class="user-name">
-      <h2>{{userInfo.nickName}}</h2>
+      <h2>{{user.name}}</h2>
       <!-- <h2>im a boss</h2> -->
     </view>
   </view>
@@ -25,17 +25,14 @@
     <view class="button-holder">
       <button class="connect-button" bindtap="getUserProfile" data-action="addGig"><h2>Add a gig</h2></button>
     </view>
-    <view class="button-holder">
-      <button class="connect-button" bindtap="getUserProfile" data-action="viewMyTalent"><h2>View my Talent</h2></button>
-    </view>
+    <!-- <view class="button-holder">
+      <button class="connect-button" bindtap="getUserProfile" data-action="viewMyTalent"><h2>View my talent</h2></button>
+    </view> -->
     <view class="button-holder">
       <button class="connect-button" bindtap="getUserProfile" data-action="viewAllGigs"><h2>My gigs</h2></button>
     </view>
     <view class="button-holder">
-
       <!-- <button class="connect-button" bindtap="getUserProfile" data-action="savedTalents"><h2>Saved Talents</h2></button> -->
-
       <button class="connect-button" bindtap="getUserProfile" data-action="viewInquiries"><h2>My connections</h2></button>
-
     </view>
   </view>

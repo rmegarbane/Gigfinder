@@ -1,7 +1,9 @@
+const app = getApp()
 // pages/post_talent/post_talent.js
 Page({
 
   data: {
+    src: null
   },
 
 
@@ -40,27 +42,35 @@ Page({
 
   bindSubmit: function(e) {
     console.log(e)
-    // let talent = e.detail.value.talent;
-    // let rate = e.detail.value.rate;
-    // let description = e.detail.description;
     let id = this.data.id;
-
-    // let user = {
-    //   talent: talent,
-    //   rate: rate,
-    //   description: description
-    // }
     let user = e.detail.value
+    let page = this
     // Update api data
     wx.request({
       url: `http://localhost:3000/api/v1/users/${id}`,
       method: 'PUT',
+      header: wx.getStorageSync('headers'),
       data: {user: user},
       success() {
         // redirect to dashboard page when done
-        wx.redirectTo({
-          url: '/pages/talent_list/talent_list'
-        });
+        if (page.data.src) {
+          // upload
+          wx.uploadFile({
+            filePath: page.data.src,
+            name: 'file',
+            header: wx.getStorageSync('headers'),
+            // url: `${app.globalData.url}/image_upload`,
+            url: `http://localhost:3000/api/v1/users/${page.data.id}/image_upload`,
+          })
+          wx.redirectTo({
+            url: '/pages/talent_list/talent_list'
+          })
+        } else {
+          wx.redirectTo({
+            url: '/pages/talent_list/talent_list'
+          });
+        }
+        
       }
     });
   },

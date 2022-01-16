@@ -7,11 +7,11 @@
     <form action="form-control string required"></form> -->
 
 <!--banner -->
-<view class="banner relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
-  <view class="banner">
-    <view class="page-section"><h1>Giggle</h1></view>
-    <view class="page-section"><h2>Connecting creative people with gig work!</h2></view>
-  </view>
+<view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/300×300/?skill);">
+  <!-- <view class="banner"> -->
+    <view class="page-section"><h1>~ Giggle ~</h1></view>
+    <view class="page-section"><h2>Find talent, post gigs.</h2></view>
+  <!-- </view> -->
 </view>
 
 <!-- Main-Menu-Card -->

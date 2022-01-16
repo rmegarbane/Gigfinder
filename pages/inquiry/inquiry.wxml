@@ -1,9 +1,10 @@
   <form bindsubmit="bindSubmit">
   
     <view class="page-section">
-      <h1>Message the gig poster</h1>
+      <h1>Message the gig owner</h1>
     </view>
 
+    <view class="form-group">
     <h2>Message</h2>
       <view class="text-area-wrap">
         <textarea name="message" placeholder="Write your message with some contact information "></textarea>
@@ -17,4 +18,6 @@
         <button style="margin: 30rpx 0" formType="submit">Submit</button>
         <button style="margin: 30rpx 0" formType="reset">Reset form</button>
       </view>
+
+    </view>
   </form>
