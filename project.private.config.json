@@ -95,6 +95,12 @@
           "pathName": "pages/inquiry/inquiry",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/bookmarks/bookmarks",
+          "pathName": "pages/bookmarks/bookmarks",
+          "query": "",
+          "scene": null
         }
       ]
     }

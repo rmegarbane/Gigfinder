@@ -12,7 +12,8 @@
     "pages/talent_list/talent_list",
     "pages/talent_show/talent_show",
     "pages/my_inquiries/my_inquiries",
-    "pages/inquiry/inquiry"
+    "pages/inquiry/inquiry",
+    "pages/bookmarks/bookmarks"
   ],
   
   "window":{
@@ -32,7 +33,7 @@
           "selectedIconPath": "pages/images/home2.png",
           "text": "Home"
          }, {
-          "pagePath": "pages/index/index",
+          "pagePath": "pages/bookmarks/bookmarks",
           "iconPath": "pages/images/favourite-heart.png",
           "selectedIconPath": "pages/images/favourite-heart.png",
           "text": "Liked"

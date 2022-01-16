@@ -1,0 +1,54 @@
+<!--pages/bookmarks/bookmarks.wxml-->
+<view class="row-between">
+  <view class="col-span-1 button-category" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+  <view class="col-span-1 button-category" data-tab="talent" bindtap="switchTab"><h2>Talents</h2></view>
+</view>
+
+
+<!-- Main-Menu-Card -->
+<view class="full-margin relative">
+
+  
+<!-- Recently posted cards -->
+<view wx:if="{{currentTab=='talent'}}" class="full-margin relative px30 grid grid-cols-2 gap-30">
+
+
+  <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="main-container-2" style="width: 100%;" data-id="{{user.id}}" mark="{{user}}">
+  
+  
+    <image src="{{user.image}}" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
+    <view class="small-container-2 px30 py30 box-b">
+        <view class="small-container-3 mb20">
+          <h2>{{user.talent}}</h2>
+        </view>
+          
+        <view class="small-container-4">
+          <view class="small-container-5">
+            <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
+            <h2>{{user.name}}</h2>
+          </view>
+
+          <view class="small-container-6">
+            <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
+            <p> 9</p>
+          </view>
+
+        </view>
+    </view>
+  </view>
+
+
+</view>
+<view wx:if="{{currentTab=='gig'}}" class="gig-cards-container">
+      <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}">
+      <view class="gig-card-info">
+        <h2>{{gig.title}}</h2>
+        <text>Rate: {{gig.rate}}</text>
+        <text>{{gig.description}}</text>
+        <text>Location: {{gig.location}}</text>
+      </view>
+    </view>
+  </view>
+
+
+</view>   

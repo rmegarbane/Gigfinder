@@ -178,5 +178,11 @@ Page({
   },
 
   onShareAppMessage: function () {
+      const { user } = this.data
+      return {
+        title: `Meet a ${user.talent}`,
+        imageUrl: user.image,
+        path: `/pages/talent_show/talent_show?id=${user.id}`
+      }
   }
 })
