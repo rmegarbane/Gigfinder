@@ -30,7 +30,7 @@
   </view>
 
 
-  <view class="controls">
+  <view class="controls" wx:if="{{user.id==gig.user_id}}">
     <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
     <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>
   </view>

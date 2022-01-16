@@ -26,6 +26,12 @@
       <button class="connect-button" bindtap="getUserProfile" data-action="addGig"><h2>Add a gig</h2></button>
     </view>
     <view class="button-holder">
+      <button class="connect-button" bindtap="getUserProfile" data-action="viewMyTalent"><h2>View my Talent</h2></button>
+    </view>
+    <view class="button-holder">
       <button class="connect-button" bindtap="getUserProfile" data-action="viewAllGigs"><h2>My gigs</h2></button>
+    </view>
+    <view class="button-holder">
+      <button class="connect-button" bindtap="getUserProfile" data-action="savedTalents"><h2>Saved Talents</h2></button>
     </view>
   </view>
