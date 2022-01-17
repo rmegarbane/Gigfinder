@@ -11,7 +11,7 @@
     </view>
 
     <view class="info-holder">
-      <image src="/pages/images/{{gig.bookmarked?'':'favourite-'}}heart.png" bindtap="listenerBookmark"/>      <view class="talent-card-info"><h1>{{gig.title}}</h1></view> 
+      <image src="/pages/images/{{gig.bookmarked?'':'favourite-'}}heart.png" bindtap="listenerBookmark"/>      <view class="gig-card-info"><h1>{{gig.title}}</h1></view> 
       <view class="gig-card-info"><h2>{{gig.location}}</h2></view>
       <view class="gig-card-info"><h2>{{gig.rate}}</h2></view>  
       <view class="gig-card-info"><text>{{gig.description}}</text></view>  
@@ -29,8 +29,19 @@
   </view>
 
 
-  <view class="controls" wx:if="{{user.id==gig.user_id}}">
-    <image src="/pages/images/edit.png" class="icon" bindtap="editGig" data-id= "{{id}}"/>
-    <image src="/pages/images/trash.png" class="icon" bindtap="deleteGig" data-id= "{{id}}"/>
+
+
+
+
+  <view class="grid grid-cols-2 main-container bg-white">
+    <view class="col-span-1 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+    <view class="col-span-1 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+  </view>
+
+<text>ssss</text>
+
+  <view class="grid grid-cols-2 main-container bg-white" wx:if="{{user.id==gig.user_id}}">
+    <image src="/pages/images/edit.png" class="col-span-1 row-center icon" bindtap="editGig" data-id= "{{id}}"/>
+    <image src="/pages/images/trash.png" class="col-span-1 row-center icon" bindtap="deleteGig" data-id= "{{id}}"/>
   </view>
 

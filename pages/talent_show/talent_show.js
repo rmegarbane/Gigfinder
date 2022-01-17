@@ -151,12 +151,17 @@ Page({
   },
 
 
-
  onShareAppMessage: function () {
-  console.log('share')
-  wx.showShareMenu({
-   withShareTicket: true
-  })
+  const { user } = this.data
+  return {
+    title: `Meet a ${user.talent}`,
+    imageUrl: user.image,
+    path: `/pages/talent_show/talent_show?id=${user.id}`
+  }
+  // console.log('share')
+  // wx.showShareMenu({
+  //  withShareTicket: true
+  // })
  },
 
   onReady: function () {
