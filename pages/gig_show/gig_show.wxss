@@ -1,11 +1,30 @@
 
+.main-container {
+  background-size: cover;
+  background-position: center;
+  height: 120rpx;
+  justify-content: center;
+  align-items: center;
+  color: rgb(2, 0, 0);
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 12px
+}
+
+.full-margin {
+  margin: 2px;
+}
+
 .card-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-
+ 
 .gig-card {
   overflow: hidden;
   background: white;
@@ -41,19 +60,9 @@
 
 
 
-
-
-.button-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 30rpx;
-}
-
 .connect-button {
-  background-color: #97BFB4;
+  background-color: #FF6F3C;
+  color: #FFFFFF;
   width: 200rpx;
   height: 100rpx;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -124,6 +133,7 @@
 } 
 
 
+
 .button-section {
   display: flex;
   /* grid-template-columns: repeat(2, 2fr); */
@@ -132,24 +142,6 @@
   flex-wrap: wrap;
   margin: 30rpx;
 }
-
-.connect-button {
-  background-color: #97BFB4;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 16rpx;
-  border-radius: 8rpx;
-}
-
-.connect-button h2 {
-  color: rgba(0, 0, 0, 0.644);
-}
-
-
-
-
 
 
 .p {

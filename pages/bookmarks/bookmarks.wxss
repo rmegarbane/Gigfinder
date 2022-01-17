@@ -346,7 +346,7 @@
   font-size: 32rpx;
   display: block;
 }
-
+  
 .banner h1 {
   color: #1F2022;
   font-style: bold;

@@ -58,7 +58,10 @@
 }
 
 .connect-button {
-  background-color: #97BFB4;
+  background-color: #FF6F3C;
+  color: #FFFFFF;
+  width: 200rpx;
+  height: 100rpx;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;

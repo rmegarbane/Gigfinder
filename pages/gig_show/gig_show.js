@@ -46,7 +46,6 @@ Page({
   },
 
 
-
   listenerBookmark: function (event) {
     console.log('clicked favorite');
     console.log(event);
@@ -61,7 +60,6 @@ Page({
         console.log(res)
         page.setData({gig:res.data})
       }
- 
     })
     wx.showToast({
       title: 'Bookmarked',

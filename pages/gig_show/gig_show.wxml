@@ -16,7 +16,7 @@
       <view class="gig-card-info"><h2>{{gig.rate}}</h2></view>  
       <view class="gig-card-info"><text>{{gig.description}}</text></view>  
       <view class="gig-card-info"><h2>Posted: {{gig.date_posted}}</h2></view>
-      <view class="gig-card-info"><h2>Expiration: {{gig.expiration}}</h2></view>
+      <view class="gig-card-info" style="width: 676rpx; height: 86rpx; display: block; box-sizing: border-box"><h2>Expiration: {{gig.expiration}}</h2></view>
       <view class="gig-card-info"><h2>Term: {{gig.term}}</h2></view>
     </view>
   </view>
@@ -28,20 +28,21 @@
     <button class="connect-button" bindtap="connect">Connect</button>
   </view>
 
-
-
-
-
-
-  <view class="grid grid-cols-2 main-container bg-white">
-    <view class="col-span-1 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
-    <view class="col-span-1 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+  <view class="grid grid-cols-2 main-container bg-white" wx:if="{{user.id==gig.user_id}}">
+    <view class="col-span-1 row-center"><image src="/pages/images/edit.png" class="col-span-1 row-center icon" bindtap="editGig" data-id= "{{id}}"/></view>
+    <view class="col-span-1 row-center"><image src="/pages/images/trash.png" class="col-span-1 row-center icon" bindtap="deleteGig" data-id= "{{id}}"/></view>
   </view>
 
-<text>ssss</text>
 
-  <view class="grid grid-cols-2 main-container bg-white" wx:if="{{user.id==gig.user_id}}">
+  <!-- <view class="grid grid-cols-2 main-container bg-white">
+    <view class="col-span-1 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+    <view class="col-span-1 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
+  </view> -->
+
+<!-- <view class="grid grid-cols-2 main-container bg-white" wx:if="{{user.id==gig.user_id}}">
     <image src="/pages/images/edit.png" class="col-span-1 row-center icon" bindtap="editGig" data-id= "{{id}}"/>
     <image src="/pages/images/trash.png" class="col-span-1 row-center icon" bindtap="deleteGig" data-id= "{{id}}"/>
-  </view>
+  </view> -->
+
+
 
