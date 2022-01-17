@@ -1,3 +1,4 @@
+let app = getApp()
 Page({
 
   data: {
@@ -18,7 +19,7 @@ Page({
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: 'http://localhost:3000/api/v1/gigs',
+      url: `${app.globalData.url}`,
       success: res => {
         console.log(res)
         page.setData(res.data)

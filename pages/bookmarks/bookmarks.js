@@ -1,4 +1,5 @@
 // pages/bookmarks/bookmarks.js
+const app = getApp()
 Page({
 
   /**
@@ -44,7 +45,7 @@ Page({
     wx.request({
       header: wx.getStorageSync('headers'),
       
-      url: `http://localhost:3000/api/v1/gigs?bookmark=true`,
+      url: `${app.globalData.url}/gigs?bookmark=true`,
 
       success: res => {
         console.log(res)

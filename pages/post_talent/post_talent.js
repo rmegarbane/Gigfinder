@@ -47,7 +47,7 @@ Page({
     let page = this
     // Update api data
     wx.request({
-      url: `http://localhost:3000/api/v1/users/${id}`,
+      url: `${app.globalData.url}/users/${id}`,
       method: 'PUT',
       header: wx.getStorageSync('headers'),
       data: {user: user},
@@ -60,7 +60,7 @@ Page({
             name: 'file',
             header: wx.getStorageSync('headers'),
             // url: `${app.globalData.url}/image_upload`,
-            url: `http://localhost:3000/api/v1/users/${page.data.id}/image_upload`,
+            url: `${app.globalData.url}/users/${page.data.id}/image_upload`,
           })
           wx.redirectTo({
             url: '/pages/talent_list/talent_list'

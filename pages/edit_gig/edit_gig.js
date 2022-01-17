@@ -18,7 +18,7 @@ Page({
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `http://localhost:3000/api/v1/gigs/${options.id}`,
+      url: `${app.globalData.url}/gigs/${options.id}`,
       success: res => {
         console.log(res)
         page.setData({gig: res.data})
@@ -43,7 +43,7 @@ Page({
     wx.request({
       header: wx.getStorageSync('headers'),
       // To here
-      url: `http://localhost:3000/api/v1/gigs/${page.data.gig.id}`,
+      url: `${app.globalData.url}/gigs/${page.data.gig.id}`,
       method: 'PUT',
       data: {gig},
       success: res => {

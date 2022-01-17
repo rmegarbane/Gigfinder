@@ -14,7 +14,7 @@ Page({
 
       header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
-      url: `http://localhost:3000/api/v1/users/${options.id}`,
+      url: `${app.globalData.url}/users/${options.id}`,
       success: res => {
         console.log(res)
         page.setData({user: res.data})
@@ -137,7 +137,7 @@ Page({
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `http://localhost:3000/api/v1/users/${this.data.user.id}/talent_bookmarks`,
+      url: `${app.globalData.url}/users/${this.data.user.id}/talent_bookmarks`,
       method: 'POST',
       success: (res) => {
         console.log(res)

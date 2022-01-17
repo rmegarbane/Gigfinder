@@ -1,4 +1,5 @@
 // pages/talent_list/talent_list.js
+let app = getApp()
 Page({
 
   /**
@@ -22,7 +23,7 @@ Page({
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: 'http://localhost:3000/api/v1/users',
+      url: `${app.globalData.url}/users`,
       success: res => {
         console.log("here's the user data ->", res)
         page.setData(res.data)

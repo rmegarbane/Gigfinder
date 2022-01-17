@@ -2,7 +2,8 @@
 
 page {
   /* colors (DON'T CHANGE VARIABLE NAMES)*/
-  --pri: #74B149;
+  --pri: #155263;
+  --sec: #FF6F3C;
   --body: #333333;
   --bodyDim: #666666;
   --bodyLight: #999999;
@@ -41,7 +42,7 @@ page {
   /* content f28 */
   color: var(--grey);
   font-size: 32rpx;
-  background-color: #EEF4F3;
+  background-color: #fafbfb;
 }
 
 .wrapper {

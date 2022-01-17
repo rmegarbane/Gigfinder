@@ -1,6 +1,6 @@
 // pages/post_gig/post_gig.js
 
-
+let app = getApp()
 Page({
   data: {
   },
@@ -12,7 +12,7 @@ Page({
 
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `http://localhost:3000/api/v1/gigs`,
+      url: `${app.globalData.url}`,
       method: 'POST',
       data: {gig: gig},
       success: res => {
