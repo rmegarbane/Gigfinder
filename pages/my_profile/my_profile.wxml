@@ -36,3 +36,4 @@
       <button class="connect-button" bindtap="getUserProfile" data-action="viewInquiries"><h2>My connections</h2></button>
     </view>
   </view>
+
