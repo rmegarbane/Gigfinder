@@ -33,6 +33,12 @@
           "selectedIconPath": "pages/images/tabbar/home-active.png",
           "text": "Home"
          },
+         {
+          "pagePath": "pages/bookmarks/bookmarks",
+          "iconPath": "pages/images/tabbar/heart.png",
+          "selectedIconPath": "pages/images/tabbar/heart-active.png",
+          "text": "Favorites"
+         },
         {
           "pagePath": "pages/my_profile/my_profile",
           "iconPath": "pages/images/tabbar/profile.png",

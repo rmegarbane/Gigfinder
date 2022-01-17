@@ -6,18 +6,19 @@ Page({
   },
 
   bindSubmit: function (e) {
-
     console.log(111, e.detail)
     const gig = e.detail.value
-
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `${app.globalData.url}`,
+      // url: `${app.globalData.url}`,
+      url: `${app.globalData.url}/gigs`,
       method: 'POST',
       data: {gig: gig},
       success: res => {
+        console.log("res here", res)
         wx.switchTab({
           url: '/pages/index/index',
+
         });
       }
   })

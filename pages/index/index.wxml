@@ -20,7 +20,7 @@
     <view class="col-span-1 {{currentTab=='talent'?'tab-active':'tab-inactive'}} pb20 row-center" data-tab="talent" bindtap="switchTab"><h2>Talents</h2></view>
     <view class="col-span-1 {{currentTab=='gig'?'tab-active':'tab-inactive'}} pb20 row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
 
-
+ 
 
     <!-- <view class="col-span-2 px60">
       <input class="search-container " type="text" placeholder="Location"/>
@@ -28,7 +28,6 @@
     <view class="col-span-2 box-b px60">
       <input placeholder-class="f36 grey-dim" placeholder-style="font-weight: 400; text-shadow: 0 0 0 #fff;" name='query' bindinput="onSearchInput" class="search-container" type="text" placeholder="Search {{currentTab == 'talent'?'talents':'gigs'}}..."/>
     </view>
-    
     <view class="col-span-2 submit-button" bindtap="search">Search</view>
   </view>
   

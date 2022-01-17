@@ -46,7 +46,6 @@ Page({
   },
 
 
-
   listenerBookmark: function (event) {
     console.log('clicked favorite');
     console.log(event);
@@ -61,7 +60,6 @@ Page({
         console.log(res)
         page.setData({gig:res.data})
       }
-
     })
     wx.showToast({
       title: 'Bookmarked',
@@ -184,7 +182,7 @@ Page({
 
   },
 
-  /**
+  /** 
    * Called when user click on the top right corner to share
    */
   onShareAppMessage: function () {
