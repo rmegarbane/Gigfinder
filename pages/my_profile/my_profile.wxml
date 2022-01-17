@@ -1,4 +1,4 @@
-<view class="page-section">
+<view class="my30 page-section">
   <h1>Dashboard</h1>
 </view>
 
@@ -15,7 +15,7 @@
   </view>
 </view>
 
-  <view class="button-area">
+  <view class="mt80 button-area">
     <!-- <view class="button-holder">
       <button class="connect-button" bindtap="updateProfile"><h2>Edit profile</h2></button>
     </view> -->

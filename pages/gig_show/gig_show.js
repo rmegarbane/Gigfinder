@@ -55,7 +55,7 @@ Page({
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `http://localhost:3000/api/v1/gigs/${this.data.gig.id}/gig_bookmarks`,
+      url: `${app.globalData.url}/gigs/${this.data.gig.id}/gig_bookmarks`,
       method: 'POST',
       success: (res) => {
         console.log(res)
@@ -82,7 +82,7 @@ Page({
 
     wx.request({
     header: wx.getStorageSync('headers'),
-    url: `http://localhost:3000/api/v1/gigs/${page.data.gig.id}`,
+    url: `${app.globalData.url}/gigs/${page.data.gig.id}`,
     method: 'DELETE',
     success: res => {
       wx.switchTab({
@@ -101,7 +101,7 @@ Page({
     wx.request({
       header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
-      url: `http://localhost:3000/api/v1/gigs/${options.id}`,
+      url: `${app.globalData.url}/gigs/${options.id}`,
       success: res => {
         console.log(res)
         page.setData({gig: res.data})

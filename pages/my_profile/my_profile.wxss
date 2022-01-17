@@ -11,8 +11,8 @@
   display: inline-block;
   width: 90%;
   border-radius: 18rpx;
-  background-color: #F1E9E5;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  background-color: #FFFFFF; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
 }
 
@@ -51,7 +51,8 @@
 }
 
 .connect-button {
-  background-color: #97BFB4;
+  background-color: #FF6F3C;
+  color: #FFFFFF;
   width: 100%;
   /* height: 100rpx;  */
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -63,7 +64,7 @@
 }
 
 .connect-button h2 {
-  color: rgba(0, 0, 0, 0.644);
+  color: #FFFFFF;
   font-size: medium;
 }
 

@@ -1,4 +1,5 @@
 // pages/index/index.js
+let app = getApp()
 Page({
 
   data: {
@@ -56,7 +57,7 @@ goToTalentList: function (e) {
     wx.request({
       header: wx.getStorageSync('headers'),
       
-      url: `http://localhost:3000/api/v1/users${query? '?query=' + query :''}`,
+      url: `${app.globalData.url}/users${query? '?query=' + query :''}`,
 
       success: res => {
         console.log(res)
@@ -70,7 +71,7 @@ goToTalentList: function (e) {
     wx.request({
       header: wx.getStorageSync('headers'),
       
-      url: `http://localhost:3000/api/v1/gigs${query? '?query=' + query :''}`,
+      url: `${app.globalData.url}/gigs${query? '?query=' + query :''}`,
 
       success: res => {
         console.log(res)
@@ -86,7 +87,7 @@ goToTalentList: function (e) {
     wx.request({
       header: wx.getStorageSync('headers'),
       
-      url: 'http://localhost:3000/api/v1/users',
+      url: `${app.globalData.url}/users`,
 
       success: res => {
         console.log(res)

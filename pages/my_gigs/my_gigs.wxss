@@ -1,7 +1,7 @@
 /* pages/my_gigs/my_gigs.wxss */
 .gig-card {
-  background-color: #F1E9E5;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
   margin: 20rpx 10rpx;
   min-height: 120rpx;

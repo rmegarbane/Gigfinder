@@ -4,9 +4,9 @@
 }
 
 .gig-card {
-  background-color: #F5F5F5;
+  background-color: #FFFFFF;
   overflow: hidden;
-  box-shadow: 0 3rpx 3rpx rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
   align-items: center;

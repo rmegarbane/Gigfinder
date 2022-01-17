@@ -18,34 +18,25 @@
   
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#C7DED7",
+    "navigationBarBackgroundColor": "#155263",
     "navigationBarTitleText": "Giggle: Find talent, post gigs.",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
 
     "tabBar": {
-        "backgroundColor": "#C7DED7",
-        "selectedColor": "#BA5B6E",
-        "color": "black",  
+        "backgroundColor": "#155263",
+        "selectedColor": "#fff",
+        "color": "#fff",  
         "list": [{
           "pagePath": "pages/index/index",
-          "iconPath": "pages/images/home2.png",
-          "selectedIconPath": "pages/images/home2.png",
+          "iconPath": "pages/images/tabbar/home.png",
+          "selectedIconPath": "pages/images/tabbar/home-active.png",
           "text": "Home"
-         }, {
-          "pagePath": "pages/bookmarks/bookmarks",
-          "iconPath": "pages/images/favourite-heart.png",
-          "selectedIconPath": "pages/images/favourite-heart.png",
-          "text": "Liked"
-        }, {
-        "pagePath": "pages/post_gig/post_gig",
-        "iconPath": "pages/images/plus.png",
-        "selectedIconPath": "pages/images/plus.png",
-        "text": "Add"
-        }, {
+         },
+        {
           "pagePath": "pages/my_profile/my_profile",
-          "iconPath": "pages/images/user.png",
-          "selectedIconPath": "pages/images/user.png",
+          "iconPath": "pages/images/tabbar/profile.png",
+          "selectedIconPath": "pages/images/tabbar/profile-active.png",
           "text": "Profile"
           }]
       },
