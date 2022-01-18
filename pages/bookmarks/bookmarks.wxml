@@ -7,7 +7,7 @@
   <view class="col-span-1 {{currentTab=='talent'?'tab-active':'tab-inactive'}}  row-center" data-tab="talent" bindtap="switchTab"><h2>Talents</h2></view>
   <view class="col-span-1 {{currentTab=='gig'?'tab-active':'tab-inactive'}} row-center" data-tab="gig" bindtap="switchTab"><h2>Gigs</h2></view>
 </view>
- 
+
 <view wx:if="{{currentTab=='talent'}}" class="full-margin relative px30 grid grid-cols-2 gap-30">
   <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="main-container-2" style="width: 100%;" data-id="{{user.id}}" mark="{{user}}">
     <image src="{{user.image}}" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
@@ -28,7 +28,6 @@
     </view>
   </view>
 </view>
-
 
 <view wx:if="{{currentTab=='gig'}}" class="gig-cards-container">
   <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}">

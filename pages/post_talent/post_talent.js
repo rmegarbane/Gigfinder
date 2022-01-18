@@ -54,7 +54,7 @@ Page({
       success() {
         // redirect to dashboard page when done
         if (page.data.src) {
-          // upload
+          // upload 
           wx.uploadFile({
             filePath: page.data.src,
             name: 'file',

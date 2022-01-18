@@ -22,7 +22,6 @@
   </view>
 </view>
 
-
   <view class="button-section">
     <button open-type="share" class="connect-button">Share</button>
     <button class="connect-button" bindtap="connect">Connect</button>

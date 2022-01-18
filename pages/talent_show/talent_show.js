@@ -25,42 +25,7 @@ Page({
     })
   },
 
-// <<<<<<< profile-login
-// =======
-//   getUserProfile(e) {
-//     console.log("clicked info", e)
-//     let page = this
-//     wx.getUserProfile({
-//       desc: 'got user profile',
-//       success: (result) => {
-//         console.log({result})
-//         console.log("good job", app.globalData)
-//         const user = wx.getStorageSync('user')
-//         // updates part in backend and saves
-//         app.globalData.userInfo = result.userInfo
-//         wx.request({
-//           url: `${app.globalData.url}/users/${user.id}`,
-//           method: 'PUT', 
-//           data: {
-//             userInfo: result.userInfo
-//           },
 
-//           success: (res) => {
-//             page.setData({
-//               user: res.data.currentUser,
-//               hasUserInfo: true
-//             })
-//             wx.switchTab({
-//               url: '/pages/my_profile/my_profile',
-//             })
-//           }
-//         })
-//       }
-//     })
-//   },
-
-
-// >>>>>>> master
   getUserProfile(e) {
     console.log("clicked info", e)
     let page = this
@@ -95,39 +60,38 @@ Page({
   },
 
 
-  // getUserProfile(e) {
-  //   console.log("clicked info", e)
-  //   let page = this
-  //   wx.getUserProfile({
-  //     desc: 'got user profile',
-  //     success: (result) => {
-  //       console.log({result})
-  //       console.log("good job", app.globalData)
-  //       const user = wx.getStorageSync('user')
-  //       // updates part in backend and saves
-  //       app.globalData.userInfo = result.userInfo
-  //       wx.request({
-  //         url: `${app.globalData.url}/users/${user.id}`,
-  //         method: 'PUT', 
-  //         data: {
-  //           userInfo: result.userInfo
-  //         },
+  connect(e) {
+    console.log("clicked info", e)
+    let page = this
+    wx.getUserProfile({
+      desc: 'got user profile',
+      success: (result) => {
+        console.log({result})
+        console.log("good job", app.globalData)
+        const user = wx.getStorageSync('user')
+        // updates part in backend and saves
+        app.globalData.userInfo = result.userInfo
+        wx.request({
+          header: wx.getStorageSync('headers'),
+          url: `${app.globalData.url}/users/${user.id}`,
+          method: 'PUT', 
+          data: {
+            userInfo: result.userInfo
+          },
 
-  //         success: (res) => {
-  //           page.setData({
-  //             user: res.data.currentUser,
-  //             hasUserInfo: true
-  //           })
-  //           wx.switchTab({
-  //             url: '/pages/my_profile/my_profile',
-  //           })
-  //         }
-  //       })
-  //     }
-  //   })
-  // },
-
-
+          success: (res) => {
+            page.setData({
+              user: res.data.currentUser,
+              hasUserInfo: true
+            })
+            wx.navigateTo({
+              url: `/pages/inquiry/inquiry?user_id=${page.data.user.id}`,
+            })
+          }
+        })
+      }
+    })
+  },
 
   listenerBookmark: function (event) {
     console.log('clicked favorite');
