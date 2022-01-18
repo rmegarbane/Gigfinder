@@ -3,7 +3,7 @@
 </view>
 
 <view class="card-holder">
-  <view class="info-card">
+  <view class="info-card" wx:if="{{user.image && user.talent && user.name && user.rate}}">
     <view class="user-avatar">
       <image src='{{user.image}}' class="avatar"/>
       <!-- <image src='/pages/images/favourite-heart.png' class="avatar"/> -->

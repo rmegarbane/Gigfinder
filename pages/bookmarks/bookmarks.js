@@ -52,19 +52,13 @@ Page({
     })
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
+
   onLoad: function (options) {
     this.fetchTalents()
-
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
 
+  onReady: function () {
   },
 
   /**

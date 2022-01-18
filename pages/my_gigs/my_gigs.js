@@ -29,19 +29,18 @@ Page({
 
 
   onLoad: function (options) {
+    console.log("options here", options)
     const page = this
     const user = wx.getStorageSync('user')
     page.setData({user})
     wx.request({
       header: wx.getStorageSync('headers'),
       // url: `http://localhost:3000/api/v1/gigs/${options.id}`,
-      url: `${app.globalData.url}/gigs/${options.id}`,
+      url: `${app.globalData.url}/gigs?my=true`,
       success: res => {
-        console.log(res)
-        page.setData({gig: res.data})
-        wx.setNavigationBarTitle({
-          title: page.data.gig.title,
-        })
+        console.log("my gigs", res)
+        // set to AppData
+        page.setData({gigs: res.data.gigs})
       }
     })
 

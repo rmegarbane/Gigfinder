@@ -17,7 +17,7 @@
         </view>
         <view class="small-container-4">
           <view class="small-container-5">
-            <image  class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image>
+            <!-- <image class="icon-mini mr20 circle" src="https://source.unsplash.com/random/?avatar" mode="aspectFill"></image> -->
             <h2>{{user.name}}</h2>
           </view>
           <view class="small-container-6">

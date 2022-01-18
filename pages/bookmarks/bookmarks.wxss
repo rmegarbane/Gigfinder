@@ -320,13 +320,14 @@
 }
 
 .gig-card {
-  background-color: #F5F5F5;
+  /* background-color: #b4ae9d; */
+  color: var(--body);
   overflow: hidden;
-  box-shadow: 0 3rpx 3rpx rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 24rpx;
+  margin: 24rpx 24rpx;
   padding: 16rpx;
   border-radius: 16rpx;
 }
@@ -334,17 +335,18 @@
 .gig-card-info {
   padding: 12rpx;
   /* display: flex; */
-  justify-content: space-between;
-  align-items: flex-end;
+  /* justify-content: space-between;
+  align-items: flex-end; */
 }
 
 .gig-card-info h2 {
-  font-size: 32rpx;
+  font-size: 36rpx;
   font-weight: bold;
+  margin-bottom: 20rpx; 
 }
 .gig-card-info text {
   font-size: 32rpx;
-  display: block;
+  /* display: block; */
 }
   
 .banner h1 {
