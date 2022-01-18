@@ -2,11 +2,7 @@ const app = getApp()
 // pages/my_inquiries/my_inquiries.js
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
   },
 
   onLoad: function (options) {
