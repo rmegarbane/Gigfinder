@@ -8,6 +8,9 @@ Page({
   bindSubmit: function (e) {
     console.log(111, e.detail)
     const gig = e.detail.value
+    
+    // gig.category_id = "1"
+    console.log(gig) 
     wx.request({
       header: wx.getStorageSync('headers'),
       // url: `${app.globalData.url}`,

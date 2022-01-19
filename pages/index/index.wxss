@@ -320,9 +320,11 @@
 
 .search-container {
   border-bottom: solid 2rpx;
-  padding: 8rpx;
-  border-color: rgb(250, 250, 250);
+  padding: 16rpx;
+  margin-bottom: 16rpx;
+  border-color: rgb(250, 250, 250); 
   width: 100%;
+  height: 92rpx;
 }
 
 .icon-mini {

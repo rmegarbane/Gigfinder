@@ -48,9 +48,9 @@ Page({
 
   listenerBookmark: function (event) {
     console.log('clicked favorite');
-    console.log(event);
+    console.log('event:', event);
     // how to make the image change color?
-    // event.toggle('img-darken');
+    // event.toggle('img-darken'); 
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
@@ -65,6 +65,9 @@ Page({
       title: 'Bookmarked',
     })
   },
+
+
+
 
   editGig: function (e) {
     console.log(e.currentTarget.dataset)

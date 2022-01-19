@@ -23,5 +23,5 @@
 <view class="button-section">
     <!-- <button class="connect-button" bindtap="onShareAppMessage">Share</button> -->
     <button open-type="share" class="connect-button">Share</button>
-    <button class="connect-button" bindtap="getUserProfile">Connect</button>
+    <button class="connect-button" bindtap="connect">Connect</button>
   </view>

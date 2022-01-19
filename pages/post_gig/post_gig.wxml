@@ -22,10 +22,10 @@
           <textarea name="rate" value="{{gig.rate}}" placeholder="How much do you pay? (by the day or hour, etc.)"/>
         </view>
 
-        <h2>Category</h2>
+        <!-- <h2>Category</h2>
         <view class="text-area-wrap">
           <textarea name="category_id" value="{{gig.category_id}}" placeholder="Coming soon! Input 1 for now."/>
-        </view>   
+        </view>    -->
 
       <h2>Date posted</h2>
         <view class="text-area-wrap">

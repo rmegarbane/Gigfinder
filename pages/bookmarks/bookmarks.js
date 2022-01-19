@@ -30,8 +30,8 @@ Page({
     const page= this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `http://localhost:3000/api/v1/users?bookmark=true`,
-
+      url: `${app.globalData.url}/users?bookmark=true`,
+      // url: `http://localhost:3000/api/v1/users?bookmark=true`,
       success: res => {
         console.log(res)
         page.setData(res.data)
@@ -43,29 +43,22 @@ Page({
     const page= this
     wx.request({
       header: wx.getStorageSync('headers'),
-      
       url: `${app.globalData.url}/gigs?bookmark=true`,
-
+      // url: `${app.globalData.url}/gigs`,
       success: res => {
-        console.log(res)
+        console.log("fetch gigs res", res)
         page.setData(res.data)
       }
     })
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
+
   onLoad: function (options) {
     this.fetchTalents()
-
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
 
+  onReady: function () {
   },
 
   /**

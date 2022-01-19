@@ -1,13 +1,16 @@
   <form bindsubmit="bindSubmit">
   
     <view class="page-section">
-      <h1>Message the gig owner</h1>
+      <h1>Send a message</h1>
+    </view>
+
+    <view class="page-section">
+      <h2>Write a message to the talent or gig poster! Include your contact information.</h2>
     </view>
 
     <view class="form-group">
-    <h2>Message</h2>
       <view class="text-area-wrap">
-        <textarea name="message" placeholder="Write your message with some contact information "></textarea>
+        <textarea name="message" placeholder="Hi!"></textarea>
       </view>   
 
       <!-- <view class="text-area-wrap">
