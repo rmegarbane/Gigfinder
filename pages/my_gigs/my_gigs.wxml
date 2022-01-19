@@ -9,10 +9,16 @@
     <view class="gig-cards-container">
      <view wx:for="{{gigs}}" wx:for-item="gig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}"> 
       <view class="gig-card-info">
-        <h2>{{gig.title}}</h2>
-        <text>Rate: {{gig.rate}}</text>
-        <text>{{gig.description}}</text>
-        <text>Location: {{gig.location}}</text>
+        <view class="bold f36 mb20">{{gig.title}}</view>
+        <view>
+          <text class="bold">Rate: </text>
+          <text>{{gig.rate}}</text>
+        </view>
+        <view>{{gig.description}}</view>
+        <view>
+          <text class="bold">Location: </text>
+          <text>{{gig.location}}</text>
+        </view>
       </view>
   </view>
 
