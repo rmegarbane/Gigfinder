@@ -7,7 +7,7 @@
 
   <view class="page-section">
     <view class="gig-cards-container">
-     <view wx:for="{{gigs}}" wx:for-item="gig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}"> 
+     <view wx:for="{{gigs}}" wx:for-item="gig" bindtap="goToShowGig" class="gig-card" data-id="{{gig.id}}" mark="{{gig}}"> 
       <view class="gig-card-info">
         <view class="bold f36 mb20">{{gig.title}}</view>
         <view>
