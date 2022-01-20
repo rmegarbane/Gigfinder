@@ -69,7 +69,10 @@ Page({
         url: `/pages/talent_show/talent_show?id=${id}`,
       })
     },
-  
+
+
+
+
 
 
   onLoad: function (options) {

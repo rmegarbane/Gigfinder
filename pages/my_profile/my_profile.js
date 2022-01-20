@@ -74,7 +74,7 @@ Page({
   },
 
   addGig: function(e) {
-    wx.reLaunch({
+    wx.navigateTo({
       // update to create new gig page
       url: '/pages/post_gig/post_gig',
     })
