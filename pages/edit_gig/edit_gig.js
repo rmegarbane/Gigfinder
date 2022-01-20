@@ -48,8 +48,8 @@ Page({
       data: {gig},
       success: res => {
         console.log('update gig result',res.data)
-        wx.switchTab({
-          url: '/pages/index/index'
+        wx.navigateTo({
+          url: '/pages/my_gigs/my_gigs'
         });
       }
       })

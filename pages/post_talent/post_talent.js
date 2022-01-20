@@ -62,12 +62,12 @@ Page({
             // url: `${app.globalData.url}/image_upload`,
             url: `${app.globalData.url}/users/${page.data.id}/image_upload`,
           })
-          wx.redirectTo({
-            url: '/pages/talent_list/talent_list'
+          wx.switchTab({
+            url: '/pages/index/index'
           })
         } else {
-          wx.redirectTo({
-            url: '/pages/talent_list/talent_list'
+          wx.switchTab({
+            url: '/pages/index/index'
           });
         }
         

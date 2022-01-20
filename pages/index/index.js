@@ -81,10 +81,10 @@ goToTalentList: function (e) {
  
   onShow: function () {
     const page = this
-    this.setData({currentTab: 'talent'})
+    // resets query to empty string
+    this.setData({currentTab: 'talent', query: ""})
     wx.request({
       header: wx.getStorageSync('headers'),
-      
       url: `${app.globalData.url}/users`,
 
       success: res => {
@@ -119,6 +119,7 @@ goToTalentList: function (e) {
 
 
   onHide: function () {
+    console.log("hiding")
   },
 
 
