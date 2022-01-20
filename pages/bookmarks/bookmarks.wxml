@@ -12,7 +12,7 @@
   <view wx:for="{{users}}" wx:for-item="user" bindtap="goToShowTalent" class="main-container-2" style="width: 100%;" data-id="{{user.id}}" mark="{{user}}">
     <image src="{{user.image}}" style="border-radius: 10px 10px 0 0; width: 100%; height: 350rpx" mode="aspectFill"/>
     <view class="small-container-2 px30 py30 box-b">
-        <view class="small-container-3 mb20">
+        <view class="small-container-3 mb20 bold">
           <h2>{{user.talent}}</h2>
         </view>
         <view class="small-container-4">
@@ -21,8 +21,8 @@
             <h2>{{user.name}}</h2>
           </view>
           <view class="small-container-6">
-            <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
-            <p> 9</p>
+            <!-- <image src= "/pages/images/eye.png" style="width: 25rpx; height: 30rpx;"></image>
+            <p> 9</p> -->
           </view>
         </view>
     </view>
