@@ -25,7 +25,7 @@
       <input class="search-container " type="text" placeholder="Location"/>
     </view> --> 
     <view class="col-span-2 box-b px60">
-      <input placeholder-class="f36 grey-dim" placeholder-style="font-weight: 400; text-shadow: 0 0 0 #fff;" name='query' bindinput="onSearchInput" class="search-container" type="text" placeholder="Search {{currentTab == 'talent'?'talents':'gigs'}}..."/>
+      <input placeholder-class="f36 grey-dim" placeholder-style="font-weight: 400; text-shadow: 0 0 0 #fff;" name='query' bindinput="onSearchInput" class="search-container" type="text" value="{{query}}" placeholder="Search {{currentTab == 'talent'?'talents':'gigs'}}..."/>
     </view>
     <view class="col-span-2 submit-button" bindtap="search">Search</view>
   </view>

@@ -26,23 +26,25 @@
 }
  
 .gig-card {
-  overflow: hidden;
+  /* overflow: hidden; */
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: inline-block;
   width: 90%;
   border-radius: 18rpx;
-
 }
 
 .gig-card image {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
   border-top-left-radius: 18rpx;
   border-top-right-radius: 18rpx;
   border-bottom-left-radius: 0rpx;
   border-bottom-right-radius: 0rpx;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center; 
+  object-fit: cover;  
 }
 
 .gig-card-info {
@@ -103,13 +105,13 @@
   /* background: url(https://picsum.photos/200/300); */
 }
 
-.card-image {
+/* .card-image {
   overflow: hidden;
   background-size: cover;
   background-position: center;
   width: 100%;
   object-fit: cover;
-}
+} */
 
 
 .card-info {
@@ -119,6 +121,7 @@
 .info-holder {
 
 }
+
 .info-holder image{
   width: 50rpx;
   height: 50rpx;

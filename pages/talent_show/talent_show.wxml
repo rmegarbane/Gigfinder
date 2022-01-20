@@ -4,21 +4,20 @@
 
 <view class="card-holder">
 
-  <view class="talent-card">
-  
-    <view class="talent-card-image-holder">
-    <image src="{{user.image}}"/>
-    </view>
+<view class="talent-card">
 
-    <view class="info-holder">
-      <image src="/pages/images/{{user.bookmarked?'':'favourite-'}}heart.png" bindtap="listenerBookmark"/>      <view class="talent-card-info"><h1>{{user.name}}</h1></view>
-      <view class="talent-card-info"><h2>{{user.talent}}</h2></view>  
-      <view class="talent-card-info"><text>{{user.description}}</text></view>  
-      <view class="talent-card-rate"><h2>{{user.rate}}</h2></view>
-    </view>
+  <view class="talent-card-image-holder">
+  <image src="{{user.image}}"/>
+  </view>
+
+  <view class="info-holder">
+    <image src="/pages/images/{{user.bookmarked?'':'favourite-'}}heart.png" bindtap="listenerBookmark"/>      <view class="talent-card-info"><h1>{{user.name}}</h1></view>
+    <view class="talent-card-info"><h2>{{user.talent}}</h2></view>  
+    <view class="talent-card-info"><text>{{user.description}}</text></view>  
+    <view class="talent-card-rate"><h2>{{user.rate}}</h2></view>
   </view>
 </view>
-
+</view>
 
 <view class="button-section">
     <!-- <button class="connect-button" bindtap="onShareAppMessage">Share</button> -->

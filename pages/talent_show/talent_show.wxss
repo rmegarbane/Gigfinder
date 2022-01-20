@@ -26,13 +26,12 @@
 }
 
 .info-holder image{
-
   width: 50rpx;
   height: 50rpx;
-  position: relative;
-  float: inline-end;
+  position: relative; 
+   float: inline-end; 
   top: 25rpx;
-  right: 30rpx;
+  right: 30rpx; 
 }
 
 .talent-card-info {
@@ -74,4 +73,16 @@
   color: rgba(0, 0, 0, 0.644);
 }
 
+.heart-and-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.namer {
+
+}
+
+.hearter {
+
+}
