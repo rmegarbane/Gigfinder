@@ -93,7 +93,7 @@ Page({
   })
 
   },
-  
+
 
   onLoad: function (options) {
     const page = this

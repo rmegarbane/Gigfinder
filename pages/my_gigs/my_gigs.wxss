@@ -40,3 +40,22 @@
   /* display: block; */
 }
   
+
+.connect-button {
+  background-color: #FF6F3C;
+  color: #FFFFFF;
+  width: 200rpx;
+  height: 100rpx;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16rpx;
+  border-radius: 8rpx;
+}
+
+.connect-button h2 {
+  color: rgba(0, 0, 0, 0.644);
+}
+
+

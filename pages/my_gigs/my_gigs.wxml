@@ -22,6 +22,9 @@
       </view>
   </view>
 
+  <button class="connect-button" bindtap="homePage">Go Back To Dashboard</button>
+
+
     <!-- <view class="col-span-1 row-center"><image src="/pages/images/edit.png" class="col-span-1 row-center icon" bindtap="editGig" /></view>
     <view class="col-span-1 row-center"><image src="/pages/images/trash.png" class="col-span-1 row-center icon" bindtap="deleteGig" data-id= "{{id}}"/></view> -->
     </view>
