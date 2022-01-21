@@ -44,6 +44,8 @@ Page({
       }
     })
 
+
+
     // const id = options.id
     // const app = getApp()
     // const globalData = app.globalData
@@ -72,6 +74,13 @@ Page({
     //   }
     // })
   },
+
+  homePage: function(e) {
+    wx.switchTab({
+      url: '/pages/my_profile/my_profile',
+    })
+  },
+
 
 
   onReady: function () {
